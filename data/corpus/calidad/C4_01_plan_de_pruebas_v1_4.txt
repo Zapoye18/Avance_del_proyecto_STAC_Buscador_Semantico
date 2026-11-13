@@ -1,0 +1,36 @@
+ID: QAL-01
+Título: Plan de pruebas de la versión 1.4
+Tipo de documento: Plan de pruebas
+Autor/Rol: QA Lead
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-11-02
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-06, PRO-05, QAL-05, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Planifica las pruebas de la actualización 1.4 (lanzamiento previsto el 2026-12-03). Cubre gameplay cooperativo, jefe final, crafting del mundo 3, reanimación, inventario, guardado, matchmaking y compatibilidad en PC y dos consolas. No cubre pruebas de seguridad del backend (las realiza Ingeniería).
+
+2. CONTEXTO
+La versión 1.3.2 tuvo un incidente posterior al despliegue (PRO-05). Este plan incorpora pruebas de migración de guardado y de rendimiento en la arena final como obligatorias.
+
+3. ESTRATEGIA
+  Tipo de prueba      | Alcance                              | Casos
+  Funcionales nuevas  | Jefe fase 2 (DIS-06), crafting mundo 3| 52
+  Regresión           | Casos existentes de 1.3.2             | 320
+  Rendimiento         | Arena final, 4 jugadores, 55 FPS      | 6 sesiones
+  Compatibilidad      | 2 consolas y 3 configuraciones de PC  | 15
+  Total de casos      |                                       | 372 + sesiones
+
+4. CALENDARIO
+
+  Fase                                    | Fechas
+  Pase 1 (funcionales y rendimiento)      | 2026-11-16 a 2026-11-20
+  Congelamiento de código                 | 2026-11-23
+  Pase 2 (regresión completa en RC1)      | 2026-11-23 a 2026-11-30
+  Validación final y decisión de salida   | 2026-12-01 y 2026-12-02
+
+5. CRITERIOS
+Entrada: build estable y especificaciones aprobadas. Salida: los de QAL-08 (cero defectos críticos y altos abiertos, regresión aprobada, 55 FPS). La cobertura por requisito se sigue en QAL-05.
+
+6. RECURSOS Y RIESGOS
+6 personas de QA, 2 consolas de desarrollo y 3 PC. Riesgo: entorno de reconexión no disponible (bloqueó 3 casos en 1.3.2); se pidió a Ingeniería tenerlo listo antes del 2026-11-16.
+Responsable: QA Lead.

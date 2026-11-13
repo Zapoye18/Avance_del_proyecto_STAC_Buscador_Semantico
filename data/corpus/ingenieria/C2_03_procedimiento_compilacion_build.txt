@@ -1,0 +1,37 @@
+ID: ING-03
+Título: Procedimiento de compilación (build) del proyecto
+Tipo de documento: Procedimiento de compilación
+Autor/Rol: Engine Programmer
+Versión: 3.1 | Estado: Vigente | Fecha: 2026-09-02
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-06, PRO-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Explica cómo compilar y empaquetar Ecos del Faro en una estación de trabajo. Reemplaza la guía v2.x, que aplicaba a Unreal Engine 4.27 y ya es obsoleta.
+
+2. REQUISITOS
+- Windows 11, Visual Studio 2022 con carga de trabajo de C++ para juegos.
+- Unreal Engine 5.4.
+- Cuenta con acceso al servidor Perforce P4 (ver ING-06).
+- 120 GB libres en disco.
+
+3. PROCEDIMIENTO
+  1) Sincronizar la rama dev (p4 sync //Ecos/dev/...).
+  2) Generar archivos de proyecto (clic derecho en el .uproject).
+  3) Abrir la solución y compilar en configuración Development Editor.
+  4) Ejecutar el comando de empaquetado:
+     RunUAT BuildCookRun -platform=Win64 -configuration=Development -cook -stage -pak
+  5) Probar el ejecutable en la carpeta Saved/StagedBuilds.
+
+4. ERRORES COMUNES
+
+  Síntoma                          | Causa probable             | Solución
+  Error LNK2019 al compilar        | Dependencia desactualizada | Sincronizar de nuevo y regenerar proyecto
+  Shaders compilan sin terminar    | Caché de shaders corrupta  | Borrar DerivedDataCache y reiniciar
+  Cook falla con .uasset bloqueado | Archivo en checkout ajeno  | Pedir liberación al propietario (ING-06)
+
+5. CRITERIOS DE VALIDACIÓN
+La compilación termina sin errores y el juego abre el menú principal. El servidor de integración continua (ver PRO-08) ejecuta los mismos pasos en cada commit.
+
+6. RESPONSABLES
+Engine Programmer. Última revisión: 2026-09-02.

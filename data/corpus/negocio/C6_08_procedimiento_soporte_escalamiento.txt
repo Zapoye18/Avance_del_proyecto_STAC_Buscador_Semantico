@@ -1,0 +1,36 @@
+ID: NEG-08
+Título: Procedimiento de atención de soporte y escalamiento a ingeniería
+Tipo de documento: Procedimiento de atención
+Autor/Rol: Support Lead
+Versión: 2.1 | Estado: Vigente | Fecha: 2026-10-20
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-07, NEG-03, NEG-04, PRO-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Explica cómo se atienden los tickets de jugadores en Zendesk y cuándo se escalan a Ingeniería. La v2.1 añade la categoría "pérdida de progreso" a partir del incidente PRO-05.
+
+2. CLASIFICACIÓN DE TICKETS
+
+  Tipo                  | Ejemplo                        | Tiempo de respuesta
+  Cuenta                | No puedo iniciar sesión        | 24 h
+  Pago                  | Cobro duplicado                | 24 h
+  Error técnico         | El juego se cierra             | 24 h
+  Pérdida de progreso   | Partida o objeto desaparecido  | 4 h
+  Sugerencia            | Propuesta de mejora            | 72 h
+
+3. PROCEDIMIENTO
+  1) Clasificar el ticket y asignar prioridad (4 h para prioridad alta).
+  2) Buscar la solución en la base de conocimiento (FAQ NEG-03, artículos de ayuda).
+  3) Si existe solución, responder con la respuesta modelo aprobada.
+  4) Si no existe, escalar al especialista técnico con evidencia: capturas, versión del juego, plataforma, identificador de jugador y pasos.
+  5) Al resolver, actualizar las respuestas modelo y la base de conocimiento.
+
+4. CUÁNDO ESCALAR
+- Código de error SAVE-203 o fallos de carga (diagnóstico en ING-07).
+- Más de 20 tickets del mismo problema en una hora: avisar al Producer para evaluar un incidente.
+
+5. SI FALLA
+Si no hay respuesta de Ingeniería en 4 horas en casos de pérdida de progreso, se escala al Technical Lead. El caso NEG-04 es un ejemplo completo.
+
+6. CRITERIOS DE VALIDACIÓN
+El 95 % de los tickets se responden dentro del plazo de su categoría. Responsable: Support Lead.

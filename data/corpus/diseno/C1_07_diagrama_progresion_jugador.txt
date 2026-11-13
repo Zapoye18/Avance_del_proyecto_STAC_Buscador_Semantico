@@ -1,0 +1,38 @@
+ID: DIS-07
+Título: Diagrama de progresión del jugador y curva de experiencia
+Tipo de documento: Diagrama de progresión
+Autor/Rol: Systems Designer
+Versión: 0.3 | Estado: Borrador | Fecha: 2026-11-03
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-01, DIS-08
+======================================================================
+ESTADO: BORRADOR. Los valores son provisionales y no se han validado en playtest.
+
+1. OBJETIVO Y ALCANCE
+Describe cómo avanza el jugador del nivel 1 al 40, cuándo desbloquea habilidades y cómo se reparte la experiencia (XP) en modo cooperativo.
+
+2. CONTEXTO
+La curva debe ser suave al inicio y más exigente después del nivel 25 para sostener el interés a largo plazo. Cada mundo ofrece una mecánica nueva.
+
+3. REGLAS (PROPUESTA)
+3.1 XP necesaria para subir de nivel = 100 x 1.12^(nivel-1) hasta el nivel 25, y crece 18 % por nivel después.
+3.2 Habilidades nuevas: niveles 5, 10, 20 y 30.
+3.3 En cooperativo, la XP de un encuentro se reparte por igual y cada jugador recibe un bono de +10 % por cada compañero vivo (máximo +30 %).
+
+  Nivel | XP acumulada (provisional)
+  5     | 480
+  10    | 1 500
+  20    | 6 300
+  25    | 11 800
+  30    | 22 700
+  40    | 104 400
+
+4. PREGUNTAS ABIERTAS
+- ¿Es demasiado exigente el tramo 30 a 40? Pendiente de playtest.
+- ¿El bono cooperativo compensa a quien juega con un equipo incompleto?
+
+5. CRITERIOS DE VALIDACIÓN
+Un jugador que juega 5 horas por semana llega al nivel 20 en 6 a 8 semanas. Se mide en el playtest 4.
+
+6. RESPONSABLES
+Systems Designer. Siguiente revisión: tras el playtest 4 (2026-11-12). Relacionados: DIS-01, DIS-08.

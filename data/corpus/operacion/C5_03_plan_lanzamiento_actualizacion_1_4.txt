@@ -1,0 +1,33 @@
+ID: PRO-03
+Título: Plan de lanzamiento de la actualización 1.4
+Tipo de documento: Plan de lanzamiento
+Autor/Rol: Release Manager
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-10-30
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: NEG-02, NEG-05, PRO-04, PRO-05, PRO-08, QAL-01, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define la secuencia, los responsables y los criterios de salida para publicar la actualización 1.4 el jueves 2026-12-03.
+
+2. CONTEXTO
+La fecha original era el viernes 2026-12-04. Se adelantó un día por la acción A-3 del postmortem PRO-05: no desplegar en viernes, para tener personal de guardia completo.
+
+3. CALENDARIO
+
+  Fecha         | Actividad                                      | Responsable
+  2026-11-23    | Congelamiento de código                        | Technical Lead
+  2026-11-27    | Versión candidata RC1                          | Release Manager
+  2026-11-23/30 | Pase 2 de pruebas (QAL-01)                     | QA Lead
+  2026-12-01/02 | Validación final y decisión de salida          | Producer y QA Lead
+  2026-12-03    | Despliegue por etapas 10 % -> 50 % -> 100 %    | DevOps Engineer
+  2026-12-03    | Publicación en las plataformas                 | Release Manager
+
+4. CRITERIO DE SALIDA (GO / NO-GO)
+Se cumplen los 6 criterios de QAL-08. La decisión se toma el 2026-12-02 a las 12:00 y se registra en esta sección.
+
+5. SI FALLA
+Si aparece un error crítico tras el despliegue, se aplica el runbook de reversión PRO-04 y se informa a la comunidad (NEG-02, NEG-05). El despliegue se ejecuta según PRO-08.
+
+6. COMUNICACIÓN
+Producción avisa a Marketing de la fecha confirmada antes de publicar el tráiler (NEG-02).
+Responsable: Release Manager.

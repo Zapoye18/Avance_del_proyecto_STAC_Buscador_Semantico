@@ -1,0 +1,35 @@
+ID: PRO-07
+Título: Informe de avance quincenal del proyecto
+Tipo de documento: Informe de avance
+Autor/Rol: Producer
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-11-06
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-05, PRO-02
+======================================================================
+INFORME DE AVANCE · Periodo 2026-10-26 a 2026-11-06 (sprint 18)
+
+1. ESTADO GENERAL
+En riesgo moderado. El hito H1 se completó con 3 días de retraso; H2 (mundo 3, 2026-11-20) sigue en curso.
+
+2. INDICADORES
+
+  Indicador                           | Valor
+  Tareas completadas                  | 74 de 92 (80 %)
+  Horas del presupuesto del trimestre | 78 % utilizado
+  Defectos altos abiertos             | 2 (BUG-2144, BUG-2152)
+
+3. COMPLETADO
+Sistema de reanimación en todos los niveles, API de matchmaking v1.2, prototipo del jefe final (H1), tabla de balance v1.2.
+
+4. EN CURSO
+Nivel Ruinas del Faro y optimización de rendimiento (ING-05), modelos del mundo 3, entorno de reconexión.
+
+5. BLOQUEOS Y DEPENDENCIAS
+- Los modelos del jefe final dependen de la aprobación de arte; sin ella no se puede cerrar H2.
+- Ingeniería debe terminar la API de sesiones antes del pase 1 de QA (2026-11-16).
+
+6. DECISIONES PENDIENTES PARA DIRECCIÓN
+Ampliar el equipo de arte con apoyo externo (riesgo R-05, ver PRO-02) y confirmar si H3 se mantiene el 2026-11-27.
+
+7. SIGUIENTE INFORME
+2026-11-20. Responsable: Producer.

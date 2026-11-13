@@ -1,0 +1,34 @@
+ID: PRO-06
+Título: Acta de reunión: retrospectiva del sprint 18
+Tipo de documento: Acta de reunión
+Autor/Rol: Associate Producer
+Versión: 1.0 | Estado: Aprobado | Fecha: 2026-11-06
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-06, ING-05, PRO-01
+======================================================================
+ACTA · Retrospectiva del sprint 18 (2026-10-26 a 2026-11-06)
+Fecha de la reunión: 2026-11-06 · Duración: 60 minutos
+
+1. ASISTENTES
+Producer, Associate Producer, Lead Game Designer, Technical Lead, Art Director, QA Lead.
+
+2. LO QUE FUNCIONÓ
+- La revisión cruzada de especificaciones entre Diseño e Ingeniería evitó 3 malentendidos.
+- Las pruebas de rendimiento de QA llegaron a tiempo para el análisis de ING-05.
+
+3. LO QUE DEBE MEJORAR
+- Decisiones tomadas en reuniones que no se documentan: la inmunidad al fuego del jefe (DIS-06) estuvo 2 días sin reflejarse en el GDD.
+- Notificaciones tardías de cambios a Audio y QA.
+
+4. ACUERDOS
+
+  Acuerdo                                                      | Responsable        | Fecha
+  Todo cambio de regla se registra en la wiki el mismo día     | Lead Game Designer | desde 2026-11-09
+  Mensaje automático a QA y Audio al cambiar una especificación| Technical Lead     | 2026-11-13
+  Revisar el hito H2 con Arte cada martes                      | Producer           | desde 2026-11-10
+
+5. SIGUIENTE SPRINT
+El sprint 19 empieza el 2026-11-09 y termina el 2026-11-20 (cronograma en PRO-01).
+
+6. SEGUIMIENTO
+Los acuerdos se revisan en la retrospectiva del sprint 19. Responsable: Associate Producer.

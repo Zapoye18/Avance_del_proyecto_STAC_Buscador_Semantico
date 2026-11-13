@@ -1,0 +1,32 @@
+ID: ING-06
+Título: Guía de integración con Perforce P4: ramas y commits
+Tipo de documento: Guía de integración
+Autor/Rol: Technical Lead
+Versión: 2.2 | Estado: Vigente | Fecha: 2026-08-31
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-03
+======================================================================
+1. OBJETIVO Y ALCANCE
+Explica cómo trabajar con ramas y changelists en Perforce P4 para código y recursos del proyecto. Aplica a Programación, Arte y Audio.
+
+2. CONVENCIÓN DE RAMAS
+  main: versiones estables publicadas.
+  dev: integración diaria.
+  feature/<equipo>-<tema>: trabajo de cada equipo (por ejemplo feature/arte-coloso).
+
+3. PROCEDIMIENTO DE COMMIT (CHANGELIST)
+  1) Sincronizar la rama antes de empezar.
+  2) Hacer checkout solo de los archivos que se van a editar.
+  3) Escribir la descripción: [ÁREA] resumen + referencia a la tarea de Jira. Ejemplo: [ING] Corrige índice del inventario - PROJ-1432.
+  4) Enviar (submit) con revisión de otra persona si el cambio toca más de 10 archivos.
+
+4. ARCHIVOS BINARIOS
+Los .uasset no se pueden fusionar. Se bloquean con checkout exclusivo antes de editarlos y se liberan al enviar.
+
+5. CONFLICTOS Y REVERSIONES
+- Conflicto de texto: resolver con la herramienta de fusión (resolve) de P4.
+- Cambio problemático: revertir con p4 undo del changelist y avisar en el canal de ingeniería.
+
+6. SI FALLA
+Si un archivo queda bloqueado por alguien ausente, el Technical Lead puede liberarlo. Ver errores de compilación en ING-03.
+Responsable: Technical Lead.

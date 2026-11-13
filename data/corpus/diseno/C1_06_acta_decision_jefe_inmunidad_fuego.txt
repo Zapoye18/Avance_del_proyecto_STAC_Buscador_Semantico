@@ -1,0 +1,33 @@
+ID: DIS-06
+Título: Acta de decisión de diseño: inmunidad al fuego del jefe en fase 2
+Tipo de documento: Acta de decisión de diseño
+Autor/Rol: Lead Game Designer
+Versión: 1.0 | Estado: Aprobado | Fecha: 2026-10-19
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-04, ART-05, DIS-01, NEG-02
+======================================================================
+ACTA ACTA-2026-14 · Reunión de decisión del 19 de octubre de 2026
+
+1. CONTEXTO
+El jefe final, Coloso de Brasas, usa ataques de fuego. En el playtest 2 (15 de octubre de 2026) 9 de 12 equipos (75 %) lo derrotaron con builds de fuego en un promedio de 4 min 10 s. El tiempo objetivo es de 7 a 9 minutos.
+
+2. DECISIÓN
+Durante la fase 2 (desde 50 % de vida) el Coloso es inmune al daño de fuego y recibe +25 % de daño de hielo.
+
+3. MOTIVOS
+Obliga al equipo a cambiar de estrategia y a usar a la Tejedora (hielo) y al combo Quiebre de DIS-01. Alternativas descartadas: (a) subir la vida del jefe, porque alarga el combate sin cambiar la estrategia; (b) añadir un escudo elemental, por costo de arte y animación.
+
+4. ASISTENTES
+Lead Game Designer, Game Designer, Technical Lead, QA Lead.
+
+5. CONSECUENCIAS Y ACCIONES
+
+  Acción                                              | Responsable        | Fecha límite
+  Actualizar DIS-01 y tabla de daño del jefe          | Game Designer      | 2026-10-21
+  Añadir transición visual de coraza de ceniza        | Animator           | 2026-10-30 (ver ART-04)
+  Evento de audio de cambio de fase                   | Sound Designer     | 2026-10-30 (ver ART-05)
+  Casos de prueba TC-0460 a TC-0463                   | QA Analyst         | 2026-11-04
+  Confirmar a Marketing el texto del tráiler          | Product Manager    | 2026-11-06 (ver NEG-02)
+
+6. SEGUIMIENTO
+Si el playtest 4 (2026-11-12) mantiene tiempos menores a 7 minutos, se revisa esta decisión.

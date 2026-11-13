@@ -1,0 +1,29 @@
+ID: PRO-02
+Título: Registro de riesgos del proyecto
+Tipo de documento: Registro de riesgos
+Autor/Rol: Project Manager
+Versión: 1.3 | Estado: Vigente | Fecha: 2026-11-05
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-02, ING-05, PRO-01, PRO-03, QAL-07
+======================================================================
+1. OBJETIVO Y ALCANCE
+Lista los riesgos activos del proyecto, con probabilidad, impacto, mitigación y responsable. Se revisa cada semana en la reunión de producción.
+
+2. ESCALA
+Probabilidad e impacto: baja, media o alta. Un riesgo con impacto alto y probabilidad media o alta se escala a Dirección.
+
+3. RIESGOS ACTIVOS (revisado el 2026-11-05)
+
+  ID   | Riesgo                                          | Prob. | Impacto | Mitigación                                  | Responsable        | Revisión
+  R-05 | Retraso en animaciones del jefe final           | media | alto    | Contratar apoyo externo de animación        | Producer           | 2026-11-12
+  R-08 | Dependencia de una persona en el guardado       | media | alto    | Documentar (ING-02) y rotar responsabilidades| Technical Lead     | 2026-11-19
+  R-11 | No llegar a 55 FPS en la arena final            | media | alto    | Aplicar correcciones de ING-05; repetir QAL-07| Engine Programmer  | 2026-11-12
+  R-12 | Entorno de reconexión no listo para el pase 1   | media | medio   | Prioridad en el sprint 19                    | Backend Engineer   | 2026-11-16
+  R-13 | Despliegue de 1.4 con incidente                 | baja  | alto    | Despliegue en jueves y por etapas (PRO-03)   | Release Manager    | 2026-11-26
+
+4. RIESGOS CERRADOS
+R-07 (migración de guardado sin cobertura) se cerró el 2026-10-15 con la v2.1 de ING-02 y los casos TC-0520/TC-0521.
+
+5. QUÉ HACER SI UN RIESGO SE MATERIALIZA
+Se abre un incidente o una tarea de contingencia, se avisa al Producer y se actualiza el cronograma (PRO-01).
+Responsable: Project Manager.

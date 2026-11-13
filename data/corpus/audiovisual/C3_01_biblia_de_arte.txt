@@ -1,0 +1,31 @@
+ID: ART-01
+Título: Biblia de arte del proyecto
+Tipo de documento: Biblia de arte
+Autor/Rol: Art Director
+Versión: 2.0 | Estado: Vigente | Fecha: 2026-08-24
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-02, ART-03, ART-07
+======================================================================
+1. OBJETIVO Y ALCANCE
+Establece las reglas visuales de Ecos del Faro para que todo el contenido (personajes, escenarios, interfaces y efectos) se vea coherente. Es la referencia de Arte, Animación y Diseño.
+
+2. CONTEXTO
+El juego se ambienta en un archipiélago desértico inspirado en paisajes del norte de México. La v2.0 reemplaza la paleta de la v1.x, que resultaba fría y poco legible en pantallas pequeñas.
+
+3. REGLAS VISUALES
+3.1 Estilo: ilustrado, con contornos suaves y contraste fuerte entre figura y fondo.
+3.2 Paleta principal: ocres (#C98A3D), azules profundos (#1E3A5F) y naranjas de fuego (#E8641B). Máximo 5 colores dominantes por escena.
+3.3 Proporciones: cabezas grandes (1/4 del cuerpo) y siluetas legibles a 20 metros de la cámara.
+3.4 Iluminación: mundo 1 luz cálida de tarde; mundo 2 (Ruinas del Faro) azul nocturno con focos naranjas; mundo 3 luz de brasas.
+3.5 Interfaz: iconos con contorno de 2 px y texto blanco sobre fondo oscuro translúcido.
+
+4. RESTRICCIONES Y QUÉ EVITAR
+- No usar negro puro (#000000) en escenarios; usar #111827.
+- No mezclar realismo fotográfico con el estilo ilustrado.
+- Los elementos con función de juego (palancas, puertas) siempre llevan un acento naranja.
+
+5. CRITERIOS DE VALIDACIÓN
+El Art Director aprueba cada asset contra esta guía. Un asset es aceptable si pasa la prueba de silueta (reconocible en negro sobre blanco).
+
+6. RESPONSABLES Y REFERENCIAS
+Responsable: Art Director. Relacionados: ART-02 (texturas), ART-03 (personaje), ART-07 (efectos de fuego).

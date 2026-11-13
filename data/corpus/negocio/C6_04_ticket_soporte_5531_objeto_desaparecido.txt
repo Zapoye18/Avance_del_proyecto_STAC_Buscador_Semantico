@@ -1,0 +1,31 @@
+ID: NEG-04
+Título: Ticket de soporte TKT-5531: objeto desaparecido del inventario
+Tipo de documento: Ticket de soporte
+Autor/Rol: Support Agent
+Versión: 1.0 | Estado: Resuelto | Fecha: 2026-10-13
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: NEG-03, NEG-08, PRO-05
+======================================================================
+TICKET TKT-5531
+
+1. DATOS
+  Creado: 2026-10-12 11:20 · Resuelto: 2026-10-13 09:40
+  Plataforma: consola · Versión del juego: 1.3.3 · Prioridad: media · Etiqueta: pérdida de objetos
+
+2. DESCRIPCIÓN DEL JUGADOR
+Un jugador reporta que un objeto raro (Esencia de brasa x2) obtenido el 9 de octubre desapareció de su inventario después de la actualización.
+
+3. DIAGNÓSTICO
+El agente consultó la base de conocimiento: no es un comportamiento esperado. Coincide con el incidente del 9 de octubre (PRO-05): los jugadores que obtuvieron objetos entre las 17:30 y las 21:10 pudieron perderlos al restaurarse la copia de la nube. Se escaló a Ingeniería con el identificador del jugador y los registros de la hora indicada (procedimiento NEG-08).
+
+4. RESOLUCIÓN
+  1) Ingeniería confirmó en el registro la obtención de 2 Esencias de brasa a las 19:02 del 2026-10-09.
+  2) Soporte restauró los objetos con la herramienta administrativa.
+  3) Se envió la respuesta modelo "Restauración de objetos" con los pasos para verificar el inventario.
+
+5. VERIFICACIÓN
+El jugador confirmó el 2026-10-13 que los objetos estaban en su inventario. El ticket se cerró con satisfacción positiva.
+
+6. ACCIONES DE SEGUIMIENTO
+El caso está cubierto por la pregunta 4 de la FAQ NEG-03; se actualizó la respuesta modelo "Restauración de objetos" en Zendesk. Una solución técnica no equivale a una respuesta autorizada: el texto enviado debe salir de las respuestas aprobadas.
+Responsable: Support Agent.

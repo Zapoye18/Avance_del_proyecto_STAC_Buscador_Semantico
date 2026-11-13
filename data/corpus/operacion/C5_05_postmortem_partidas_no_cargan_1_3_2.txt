@@ -1,0 +1,41 @@
+ID: PRO-05
+Título: Postmortem: partidas que no cargaban después de la actualización 1.3.2
+Tipo de documento: Postmortem de incidente
+Autor/Rol: Producer
+Versión: 1.1 | Estado: Aprobado | Fecha: 2026-11-02
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-02, NEG-03, NEG-04, PRO-04, PRO-08, QAL-04, QAL-08
+======================================================================
+POSTMORTEM · Incidente del viernes 2026-10-09
+Publicado el 2026-10-14. Estado de las acciones actualizado el 2026-11-02 (v1.1).
+
+1. RESUMEN
+Tras desplegar la versión 1.3.2, el 18 % de las sesiones no pudo cargar partidas guardadas durante 3 horas (de 18:10 a 21:10), con unos 2 300 jugadores afectados y 412 tickets de soporte en 24 horas.
+
+2. CRONOLOGÍA (hora de Monterrey)
+  17:30  Despliegue completo del servicio de guardado 1.3.2.
+  18:10  Grafana alerta: tasa de errores de carga sobre 5 %.
+  18:25  Soporte recibe los primeros tickets de partidas que no cargan.
+  18:50  QA reproduce el fallo con un archivo de formato 1.1.
+  19:40  Ingeniería identifica la causa.
+  21:10  Reversión del servicio (runbook PRO-04): las sesiones se normalizan.
+  Sábado 2026-10-10, 11:00  Hotfix 1.3.3 desplegado y validado.
+
+3. CAUSA RAÍZ
+El script de migración al formato 2.0 asumía el campo schema_version, que no existe en archivos del formato 1.1 (versiones 1.2 a 1.3.1). ING-02 no documentaba ese formato y la regresión QAL-04 no tenía casos con archivos 1.1.
+
+4. FACTORES CONTRIBUYENTES
+- Despliegue un viernes por la tarde con menos personal disponible.
+- El servicio de guardado se desplegó a todos los servidores a la vez, sin etapa de observación.
+- El umbral de alerta (5 %) era alto.
+
+5. ACCIONES CORRECTIVAS
+
+  ID  | Acción                                              | Responsable        | Fecha límite | Estado
+  A-1 | Migración de formato 1.1 y casos TC-0520/TC-0521    | Gameplay Programmer| 2026-10-15   | hecho (ING-02 v2.1)
+  A-2 | Umbral de alerta a 2 % y despliegue por etapas      | DevOps Engineer    | 2026-10-16   | hecho (PRO-08 v2.0)
+  A-3 | No desplegar en viernes                             | Release Manager    | 2026-10-30   | hecho (QAL-08 v2.0)
+  A-4 | Publicar FAQ de recuperación de partidas            | Support Lead       | 2026-10-12   | hecho (NEG-03)
+
+6. LECCIONES APRENDIDAS
+Una migración de datos es un cambio de alto riesgo y requiere pruebas con todos los formatos históricos. Una solución técnica no equivale a una respuesta autorizada para jugadores (ver NEG-04).

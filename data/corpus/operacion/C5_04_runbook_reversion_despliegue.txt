@@ -1,0 +1,33 @@
+ID: PRO-04
+Título: Runbook: reversión de un despliegue (rollback)
+Tipo de documento: Runbook
+Autor/Rol: DevOps Engineer
+Versión: 1.1 | Estado: Vigente | Fecha: 2026-10-15
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-07, PRO-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Guía operativa para revertir un despliegue que afecta a los jugadores. Aplica a servicios del backend y a versiones del cliente.
+
+2. CUÁNDO USARLO
+Cuando, tras un despliegue, ocurre alguno de estos casos:
+  - Más de 5 % de las sesiones fallan durante más de 10 minutos.
+  - Las partidas no cargan (código SAVE-203, ver ING-07).
+  - La tasa de errores supera 2 veces la línea base.
+
+3. PROCEDIMIENTO
+  1) Declarar el incidente y avisar al canal de operaciones. El Producer de guardia autoriza la reversión.
+  2) Detener el despliegue gradual en curso.
+  3) Restaurar la versión anterior desde el pipeline de GitLab (job rollback-<servicio>).
+  4) Verificar en Grafana que la tasa de errores baja a la línea base en 10 minutos.
+  5) Confirmar con QA que una partida de prueba carga correctamente.
+  6) Registrar el incidente con hora de inicio y fin y abrir el postmortem en 3 días hábiles (ver PRO-05).
+
+4. TIEMPO ESPERADO
+20 minutos. Responsable de ejecución: DevOps Engineer.
+
+5. SI LA REVERSIÓN FALLA
+Escalar a Ingeniería (Technical Lead). Si hay datos de guardado migrados, no restaurar bases de datos sin su aprobación.
+
+6. HISTORIAL
+v1.1 (2026-10-15): se añadió el paso 5 y el criterio de SAVE-203 tras el incidente del 9 de octubre.

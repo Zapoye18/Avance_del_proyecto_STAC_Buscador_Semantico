@@ -1,0 +1,34 @@
+ID: QAL-05
+Título: Matriz de cobertura de pruebas por funcionalidad
+Tipo de documento: Matriz de cobertura
+Autor/Rol: QA Analyst
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-11-04
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-05, DIS-01, DIS-02, DIS-05, DIS-06, ING-01, ING-02, ING-04, ING-07, QAL-01
+======================================================================
+1. OBJETIVO Y ALCANCE
+Relaciona cada requisito funcional con los casos de prueba que lo verifican, para detectar huecos antes de la versión 1.4 (QAL-01).
+
+2. MATRIZ
+
+  Requisito                                   | Fuente          | Casos                  | Cobertura
+  REQ-CMB-03 Combo Quiebre x1.5 en 3 s        | DIS-01 3.5      | TC-0120, TC-0121       | cubierto
+  REQ-CRF-02 Armas raras desde el mundo 3     | DIS-02          | TC-0210                | cubierto
+  REQ-REA-01 Reanimación de 4 s sin daño      | DIS-05          | TC-0301 a TC-0304      | cubierto
+  REQ-INV-01 Inventario de hasta 200 objetos  | ING-01          | TC-0412, TC-0412b      | cubierto
+  REQ-SAV-02 Migración de formatos 1.0 y 1.1  | ING-02          | TC-0520, TC-0521       | cubierto desde 2026-10-15
+  REQ-MM-01 Timeout de emparejamiento de 10 s | ING-04          | TC-0610                | cubierto
+  REQ-NET-03 Reconexión de sesión             | ING-07          | TC-0630 (bloqueado)    | parcial
+  REQ-AUD-01 Eventos de audio de combate      | ART-05          | sin casos              | sin cobertura
+
+3. RESUMEN
+Cobertura actual: 92 % de los requisitos (46 de 50) con al menos un caso. Sin cobertura: eventos de audio. Parcial: reconexión.
+
+4. ACCIONES
+  - Crear 4 casos de audio (QA Analyst, 2026-11-13).
+  - Habilitar el entorno de reconexión (Ingeniería, 2026-11-16).
+  - Casos del jefe fase 2: TC-0460 a TC-0463 (ver DIS-06).
+
+5. RIESGO
+Si no se cubren audio y reconexión antes del pase 2 (2026-11-23), se reporta como riesgo en el informe de salida.
+Responsable: QA Analyst.

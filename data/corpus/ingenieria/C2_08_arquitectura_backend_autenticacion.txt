@@ -1,0 +1,32 @@
+ID: ING-08
+Título: Arquitectura backend: autenticación y servicio de sesiones
+Tipo de documento: Documento de arquitectura
+Autor/Rol: Backend Engineer
+Versión: 1.3 | Estado: Vigente | Fecha: 2026-09-17
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-02, ING-04, ING-07, PRO-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Describe los servicios del backend que autentican jugadores y administran sesiones: componentes, seguridad y límites. Sirve de base para el matchmaking (ING-04).
+
+2. COMPONENTES
+  - Servicio de autenticación: emite tokens JWT con expiración de 1 hora y renovación automática.
+  - Servicio de sesiones: contenedores Docker con balanceo de carga (mínimo 3 réplicas).
+  - Base de datos NoSQL con réplica para perfiles y guardados.
+  - Servicio de guardado en la nube (ver ING-02).
+
+3. SEGURIDAD Y LÍMITES
+  - Limitación de peticiones (rate limiting): 60 por minuto por cuenta.
+  - Contraseñas nunca almacenadas en claro; se usa un proveedor de identidad externo.
+  - Todo el tráfico va cifrado (TLS 1.2 o superior).
+
+4. RESTRICCIONES Y EXCEPCIONES
+- Los datos personales de jugadores se guardan solo en la región de su cuenta.
+- Los tokens vencidos no se renuevan si la cuenta fue suspendida.
+
+5. SI FALLA
+Si el servicio de autenticación no responde, el juego permite modo sin conexión con progreso local y sincroniza después. Ver diagnóstico de red en ING-07.
+
+6. CRITERIOS DE VALIDACIÓN
+Disponibilidad mensual del 99.5 %; monitoreo con paneles de Grafana (ver PRO-08).
+Responsable: Backend Engineer; revisión de seguridad: Technical Lead.

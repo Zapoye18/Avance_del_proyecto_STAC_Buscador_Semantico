@@ -1,0 +1,32 @@
+ID: PRO-01
+Título: Cronograma de hitos (milestones) del trimestre octubre-diciembre 2026
+Tipo de documento: Cronograma
+Autor/Rol: Producer
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-11-02
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: PRO-02, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Muestra los hitos (milestones) comprometidos del trimestre octubre a diciembre de 2026 para la actualización 1.4, con responsables, dependencias y estado. Se actualiza cada lunes.
+
+2. CONTEXTO
+El trabajo se organiza en sprints de dos semanas en Jira: sprint 19 del 2026-11-09 al 2026-11-20 y sprint 20 del 2026-11-23 al 2026-12-04.
+
+3. HITOS
+
+  Hito | Entregable                          | Fecha comprometida | Responsable      | Estado (2026-11-02)
+  H1   | Prototipo jugable del jefe final    | 2026-10-30         | Producer         | completado el 2026-11-02 (3 días tarde)
+  H2   | Contenido completo del mundo 3      | 2026-11-20         | Producer         | en curso, riesgo moderado
+  H3   | Versión candidata (RC1)             | 2026-11-27         | Release Manager  | pendiente
+  H4   | Lanzamiento de la actualización 1.4 | 2026-12-03 (jueves)| Release Manager  | pendiente
+
+4. DEPENDENCIAS
+  - H2 depende de los modelos del jefe final y del mundo 3 (Arte) y de la API de sesiones (Ingeniería).
+  - H3 depende de H2 y del congelamiento de código del 2026-11-23.
+  - H4 depende de los criterios de QAL-08.
+
+5. QUÉ HACER SI UN HITO SE RETRASA
+El Producer evalúa el impacto en los hitos siguientes dentro de 24 horas, lo registra en el registro de riesgos (PRO-02) y propone recorte de alcance o apoyo adicional. Un retraso de H3 mayor a 2 días mueve H4.
+
+6. CRITERIOS DE VALIDACIÓN
+Las fechas se confirman cada lunes con los líderes de área. Responsable: Producer.

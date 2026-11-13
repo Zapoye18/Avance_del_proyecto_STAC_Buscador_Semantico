@@ -1,0 +1,36 @@
+ID: ING-05
+Título: Informe de rendimiento: profiling del nivel Ruinas del Faro
+Tipo de documento: Informe de rendimiento
+Autor/Rol: Engine Programmer
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-10-27
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-06, DIS-04, QAL-07, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Analiza la causa de las caídas de FPS que QA reportó en la arena final de Ruinas del Faro (QAL-07, pruebas del 19 al 22 de octubre de 2026) y propone correcciones.
+
+2. MÉTODO
+Profiling con Unreal Insights en la consola objetivo, 4 jugadores y 32 a 38 enemigos, build 1.3.3, durante 10 minutos el 2026-10-26.
+
+3. RESULTADOS
+
+  Métrica                       | Medición actual | Meta
+  Tiempo de frame (promedio)    | 29.4 ms (34 FPS)| 16.6 ms (60 FPS)
+  Hilo de render                | 18.4 ms         | 10 ms
+  Draw calls por frame          | 3 100           | 1 500
+  Actualización de IA (hilo)    | 6.8 ms          | 3 ms
+
+4. INTERPRETACIÓN
+El cuello de botella es la CPU: demasiados draw calls por objetos sin agrupar y 38 enemigos actualizando su inteligencia artificial a 30 Hz, incluso los lejanos. La memoria de video no es la causa principal.
+
+5. CORRECCIONES PROPUESTAS
+  1) Agrupar objetos repetidos (batching): de 3 100 a unos 1 400 draw calls.
+  2) Reducir la IA de enemigos lejanos a 10 Hz.
+  3) Niveles de detalle (LOD) en los 3 modelos de enemigo más frecuentes (apoyo de arte: ART-06).
+  4) Limitar la arena a 32 enemigos (ya aplicado en DIS-04 v1.1).
+
+6. RESULTADO ESPERADO Y VALIDACIÓN
+Estimado: 58 FPS. Es una proyección, no una medición. QA repetirá la prueba el 2026-11-11 con el criterio de 55 FPS (QAL-08).
+
+7. RIESGOS
+Si el LOD cambia la silueta de enemigos, Arte debe aprobarlo. Responsable: Engine Programmer.

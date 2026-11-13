@@ -1,0 +1,33 @@
+ID: DIS-03
+Título: Tabla de balance de armas y cooldown de habilidades
+Tipo de documento: Tabla de balance
+Autor/Rol: Game Designer
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-10-26
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-01, DIS-02, DIS-06
+======================================================================
+1. OBJETIVO Y ALCANCE
+Registra los valores de daño, energía y cooldown de cada arma para mantener el equilibrio (balance) entre opciones. Complementa las reglas de DIS-01 y las recetas de DIS-02.
+
+2. CONTEXTO
+En el playtest 3 (22 de octubre de 2026, 40 jugadores en 10 equipos) el martillo estuvo presente en 46 % de los encuentros ganados, contra 25 % esperado con 4 armas. Esto indica que dominaba a las demás. En v1.2 se reduce su daño.
+
+3. VALORES VIGENTES (v1.2)
+
+  Arma     | Daño base | Energía por golpe pesado | Cooldown habilidad | Cambio en v1.2
+  Lanza    | 36        | 12                       | 8 s                | sin cambio
+  Espada   | 42        | 15                       | 12 s               | sin cambio
+  Arco     | 30        | 8                        | 15 s               | sin cambio
+  Martillo | 59        | 22                       | 20 s               | daño 66 -> 59 (-10 %)
+
+4. RESTRICCIONES Y EXCEPCIONES
+- Contra el jefe final en fase 2, el daño de fuego se reduce a 0 (ver DIS-06); la tabla no lo contempla.
+- Los valores aplican a nivel de arma 1; las mejoras se calculan con la fórmula de DIS-01 (sección 3.3).
+
+5. CRITERIOS DE VALIDACIÓN
+- Objetivo: cada arma aparece entre 20 % y 30 % de los encuentros ganados.
+- Se mide en el playtest 4 (2026-11-12). Si el martillo sigue sobre 30 %, se baja otro 5 %.
+
+6. HISTORIAL
+v1.1 (2026-09-30): primera tabla con las 4 armas. v1.2 (2026-10-26): ajuste del martillo.
+Responsable: Game Designer.

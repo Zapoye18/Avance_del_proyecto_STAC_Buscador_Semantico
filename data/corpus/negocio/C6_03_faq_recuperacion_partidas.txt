@@ -1,0 +1,34 @@
+ID: NEG-03
+Título: Preguntas frecuentes para jugadores: recuperación de partidas guardadas
+Tipo de documento: FAQ / artículo de ayuda
+Autor/Rol: Support Lead
+Versión: 1.1 | Estado: Vigente | Fecha: 2026-10-12
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: NEG-08
+======================================================================
+PREGUNTAS FRECUENTES · Recuperación de partidas guardadas
+Actualizado el 12 de octubre de 2026 por el incidente del 9 de octubre.
+
+1. ¿PERDÍ MI PROGRESO?
+En la mayoría de los casos no. Tu progreso se guarda en la nube y también en tu dispositivo.
+
+2. ¿CÓMO SINCRONIZO MI PARTIDA?
+  1) Abre el juego e inicia sesión con tu cuenta.
+  2) Ve a Opciones > Cuenta.
+  3) Elige "Cargar desde la nube".
+  4) Espera el mensaje "Partida sincronizada".
+
+3. MI PARTIDA NO CARGA Y VEO EL CÓDIGO SAVE-203
+Este código indica que hubo un problema al actualizar tu archivo de guardado.
+  1) Cierra y reinicia el juego.
+  2) Asegúrate de tener la versión 1.3.3 o posterior.
+  3) Si el código persiste, envía un ticket con tu identificador de jugador, plataforma y captura del mensaje.
+
+4. FALTA UN OBJETO O MONEDAS QUE CONSEGUÍ EL 9 DE OCTUBRE
+Si jugaste entre las 17:30 y las 21:10 de ese día, algunos objetos pudieron no sincronizarse. Envía un ticket indicando el objeto y la hora aproximada; el equipo lo restaura.
+
+5. ¿CUÁNTO TARDAN EN RESPONDER?
+Casos de pérdida de progreso: 4 horas hábiles. Otros casos: 24 horas.
+
+6. MÁS INFORMACIÓN
+Centro de ayuda del juego, sección "Cuenta y partidas". Para soporte: procedimiento interno en NEG-08.

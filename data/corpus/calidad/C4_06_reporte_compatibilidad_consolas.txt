@@ -1,0 +1,33 @@
+ID: QAL-06
+Título: Reporte de compatibilidad en consolas y PC
+Tipo de documento: Reporte de compatibilidad
+Autor/Rol: QA Tester
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-10-30
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-06, QAL-07, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Registra los resultados de compatibilidad de la build 1.3.3 en 2 consolas y 3 configuraciones de PC, probada del 2026-10-26 al 2026-10-29.
+
+2. CONFIGURACIONES
+
+  Plataforma      | Detalle
+  Consola A       | consola de generación actual, kit de desarrollo
+  Consola B       | consola anterior, kit de desarrollo
+  PC baja         | GPU de 4 GB de memoria de video, 8 GB de RAM
+  PC media        | GPU de 8 GB, 16 GB de RAM
+  PC alta         | GPU de 12 GB, 32 GB de RAM
+
+3. RESULTADOS
+
+  Hallazgo                                           | Plataforma | Defecto    | Severidad
+  Tiempo de carga de 41 s (límite de certificación 30 s) | Consola B  | BUG-2144   | alta
+  Texturas que no cargan (memoria de video llena)    | PC baja    | BUG-2147   | media
+  Resto de configuraciones sin hallazgos             | -          | -          | -
+
+4. INTERPRETACIÓN
+Ambos defectos se relacionan con memoria y carga de assets; la optimización de texturas (ART-06) debería reducirlos. En consola A el rendimiento se analiza aparte (QAL-07).
+
+5. ESTADO Y SIGUIENTE PASO
+Defectos abiertos. Se repiten las pruebas en el pase 1 (2026-11-16). Un incumplimiento del tiempo de carga bloquea la salida (QAL-08).
+Responsable: QA Tester.

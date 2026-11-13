@@ -1,0 +1,37 @@
+ID: DIS-01
+Título: GDD - Sistema de combate cooperativo
+Tipo de documento: Game Design Document (GDD)
+Autor/Rol: Lead Game Designer
+Versión: 1.1 | Estado: Vigente | Fecha: 2026-09-14
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-03, DIS-05, DIS-06, ING-02, ING-04, QAL-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define las reglas del combate cooperativo de Ecos del Faro para 1 a 4 jugadores: clases, habilidades, daño, energía, cooldown, combos y escalado de dificultad. No cubre la implementación técnica (ver ING-02 e ING-04) ni los valores numéricos de cada arma (ver DIS-03).
+
+2. CONTEXTO
+Las pruebas de la versión 1.3 mostraron que los jugadores nuevos no entendían el rol de apoyo y que el combate se sentía igual con 1 o con 4 jugadores. La versión 1.1 de este GDD añade el combo cooperativo "Quiebre" y el escalado de vida por jugador.
+
+3. REGLAS
+3.1 Clases (una por jugador, elegida antes de la partida):
+  - Vanguardia: espada o martillo; absorbe daño y rompe defensas.
+  - Rastreador: arco; daño a distancia y marcado de enemigos.
+  - Tejedora: bastón; hielo y apoyo al equipo.
+3.2 Habilidades: cada clase tiene 3 activas con cooldown base de 8 a 20 segundos. Cada nivel de habilidad reduce 4 % el cooldown (máximo -20 %).
+3.3 Daño = daño base del arma x (1 + 0.05 x nivel de habilidad) x multiplicador de combo.
+3.4 Energía: máximo 100. Se regenera 5 puntos/s fuera de combate y 2 puntos/s en combate. Los golpes pesados consumen energía (valores en DIS-03).
+3.5 Combo "Quiebre": si un jugador aplica hielo y otro un golpe de impacto sobre el mismo enemigo dentro de 3 segundos, el segundo golpe hace x1.5 de daño.
+3.6 Escalado por jugador: vida del enemigo = 100 % (1 jugador), 135 % (2), 170 % (3), 205 % (4).
+
+4. RESTRICCIONES Y EXCEPCIONES
+- No se pueden usar habilidades en estado de derribo (ver DIS-05).
+- Los jefes son inmunes al aturdimiento durante las transiciones de fase.
+- El jefe final tiene reglas propias: inmunidad al fuego en la fase 2 (ver DIS-06).
+
+5. CRITERIOS DE VALIDACIÓN
+- Un encuentro estándar con 4 jugadores se gana en 90 a 150 segundos.
+- Al menos 60 % de los jugadores de prueba usa un combo cooperativo en su primera sesión.
+- QA verifica estas reglas con la matriz de cobertura QAL-05.
+
+6. RESPONSABLES Y REFERENCIAS
+Responsable (owner): Lead Game Designer. Quien cambie una regla debe actualizar este documento el mismo día y avisar a Programación, QA y Audio.

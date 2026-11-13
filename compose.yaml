@@ -4,4 +4,8 @@ services:
     ports:
       - "127.0.0.1:8000:8000"
     volumes:
-      - ./data:/project/data:ro
+      - ./data:/project/data/corpus:ro
+      - ./data/incoming:/project/data/incoming
+      - ./data/training:/project/data/training
+      - ./models:/project/models
+      - ./indexes:/project/indexes

@@ -1,0 +1,36 @@
+ID: NEG-02
+Título: Plan de campaña de marketing para la actualización 1.4
+Tipo de documento: Plan de campaña
+Autor/Rol: Marketing Manager
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-11-05
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-06, NEG-01, PRO-03
+======================================================================
+1. OBJETIVO Y ALCANCE
+Aumentar la visibilidad de la actualización 1.4 y lograr que regresen jugadores inactivos. Periodo de la campaña: 2026-11-17 a 2026-12-10.
+
+2. CONTEXTO
+La actualización incluye el jefe final Coloso de Brasas con su fase 2 (ver DIS-06) y el mundo 3. La fecha de lanzamiento es el 2026-12-03 (PRO-03).
+
+3. MENSAJES CLAVE
+  - Un nuevo jefe que obliga a cooperar.
+  - Mundo 3: Tierra de Brasas.
+  - Modo cooperativo mejorado.
+
+4. CANALES Y CALENDARIO
+
+  Fecha       | Pieza                          | Canal
+  2026-11-17  | Teaser del jefe                | Redes sociales y Discord
+  2026-11-24  | Tráiler con el combate         | Redes, creadores de contenido
+  2026-11-30  | Anuncio de fecha confirmada    | Todos los canales
+  2026-12-03  | Transmisión en vivo del lanzamiento | Plataformas de streaming
+  2026-12-10  | Resumen y encuesta a jugadores | Discord y correo
+
+5. REGLAS Y RESTRICCIONES
+- Antes de publicar el tráiler (2026-11-24) Producción confirma que las funcionalidades mostradas estarán disponibles.
+- No se anuncia la fecha hasta que se cumpla el congelamiento de código (2026-11-23).
+- Los materiales usan solo recursos aprobados por Arte.
+
+6. PRESUPUESTO Y MÉTRICAS
+Presupuesto: 85 000 MXN. Objetivos: 400 000 de alcance, 6 000 clics a la página de la tienda y 15 % de jugadores inactivos que regresan (línea base en NEG-01).
+Responsable: Marketing Manager.

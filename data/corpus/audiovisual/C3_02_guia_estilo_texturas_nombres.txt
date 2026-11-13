@@ -1,0 +1,34 @@
+ID: ART-02
+Título: Guía de estilo de texturas y convenciones de nombres de assets
+Tipo de documento: Guía de estilo
+Autor/Rol: Technical Artist
+Versión: 1.4 | Estado: Vigente | Fecha: 2026-09-08
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-06
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define resoluciones, mapas requeridos y nombres de archivos de texturas para que Programación y Arte integren los assets sin errores.
+
+2. RESOLUCIONES
+  Tipo de asset | Resolución estándar
+  Personajes    | 2048 x 2048 px
+  Enemigos      | 2048 x 2048 px (1024 en LOD1)
+  Props         | 1024 x 1024 px
+  Interfaz      | según el tamaño de pantalla, potencias de 2
+
+3. MAPAS REQUERIDOS
+Albedo, normal, rugosidad y metalicidad. Se empaquetan rugosidad, metalicidad y oclusión en una sola textura (canales R, G y B).
+
+4. CONVENCIÓN DE NOMBRES
+Formato: <Tipo>_<Objeto>_<Variante>_<Mapa>
+Ejemplo: T_Espada_Hierro_Albedo. Prefijos: T_ textura, SM_ malla estática, SK_ malla con esqueleto, M_ material.
+Los nombres no llevan espacios ni acentos.
+
+5. HERRAMIENTAS Y EXPORTACIÓN
+Texturizar con Substance 3D; ajustes finales en Photoshop. Exportar en formato comprimido BC7 para consola. Límite de memoria: 8 MB por personaje y 2 MB por prop.
+
+6. SI FALLA
+Si el motor rechaza una textura (importación fallida), revisar nombre, resolución potencia de 2 y canal sRGB. Para optimizar memoria ver ART-06.
+
+7. CRITERIOS DE VALIDACIÓN
+El Technical Artist revisa cada entrega con una lista de comprobación: nombre válido, resolución correcta, mapas completos y memoria dentro del límite. Responsable: Technical Artist.

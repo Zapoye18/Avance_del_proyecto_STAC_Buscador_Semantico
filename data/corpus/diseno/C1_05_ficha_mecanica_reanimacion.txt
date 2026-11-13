@@ -1,0 +1,31 @@
+ID: DIS-05
+Título: Ficha de mecánica: reanimación de compañeros
+Tipo de documento: Ficha de mecánica
+Autor/Rol: Game Designer
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-09-07
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-01, DIS-04, QAL-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define cómo un jugador derribado vuelve al combate gracias a sus compañeros. Fomenta la cooperación sin castigar en exceso la derrota.
+
+2. CONTEXTO
+En los primeros playtests (septiembre de 2026) los jugadores abandonaban la partida tras caer. La reanimación busca crear momentos de tensión y rescate.
+
+3. REGLAS
+3.1 Cuando la vida llega a 0, el jugador cae en estado de derribo durante 20 segundos.
+3.2 Un compañero lo reanima manteniendo la interacción 4 segundos sin recibir daño. El reanimado vuelve con 40 % de vida.
+3.3 Si el compañero recibe daño durante la interacción, la reanimación se interrumpe y debe empezar de nuevo.
+3.4 Si nadie lo reanima en 20 segundos, el jugador reaparece en el último checkpoint y pierde 5 % de las monedas que lleva.
+
+4. RESTRICCIONES Y EXCEPCIONES
+- No se puede reanimar durante cinemáticas del jefe ni durante la entrada a la arena de DIS-04.
+- Si todo el equipo está derribado, la partida termina y se reinicia desde el último checkpoint.
+- Una persona derribada no puede usar habilidades ni objetos.
+
+5. CRITERIOS DE VALIDACIÓN
+- Al menos 70 % de las reanimaciones intentadas en playtest se completan.
+- QA valida los casos de interrupción y de equipo derribado (matriz QAL-05).
+
+6. RESPONSABLES Y REFERENCIAS
+Responsable: Game Designer. Relacionados: DIS-01 (reglas de daño) y DIS-04 (nivel).

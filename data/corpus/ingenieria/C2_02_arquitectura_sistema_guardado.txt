@@ -1,0 +1,37 @@
+ID: ING-02
+Título: Arquitectura del sistema de guardado de partidas
+Tipo de documento: Documento de arquitectura
+Autor/Rol: Gameplay Programmer
+Versión: 2.1 | Estado: Vigente | Fecha: 2026-10-15
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-01, ING-07, NEG-08, PRO-05, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Describe cómo el juego guarda y recupera partidas: serializador, almacenamiento local y servicio en la nube. Incluye los formatos de archivo y la migración entre versiones.
+
+2. CONTEXTO
+La v2.0 (septiembre de 2026) introdujo el formato de guardado 2.0. La v2.1 (esta) corrige un vacío detectado en el incidente del 9 de octubre (PRO-05): la migración no contemplaba archivos del formato 1.1.
+
+3. FLUJO DE GUARDADO
+  1) El cliente serializa el estado (inventario según ING-01, progreso, monedas).
+  2) Escribe un archivo temporal y calcula un checksum.
+  3) Verifica el checksum y reemplaza el archivo de forma atómica.
+  4) Sincroniza con el backend; si no hay conexión, conserva la copia anterior y reintenta (3 intentos, espera exponencial).
+
+4. FORMATOS Y MIGRACIÓN
+
+  Formato | Versión del juego   | Campo schema_version | Migración a 2.0
+  1.0     | lanzamiento a 1.1   | sí                   | sí
+  1.1     | 1.2 a 1.3.1         | no                   | sí (agregada en v2.1)
+  2.0     | 1.3.2 en adelante   | sí                   | no aplica
+
+5. RESTRICCIONES Y EXCEPCIONES
+- Nunca se borra el archivo anterior hasta validar el nuevo.
+- Si la migración falla, el juego conserva el archivo original y muestra el código de error SAVE-203.
+
+6. SI FALLA
+Un archivo corrupto se restaura desde la copia en la nube. Procedimiento de soporte en NEG-08; diagnóstico de red en ING-07.
+
+7. CRITERIOS DE VALIDACIÓN
+Prueba de migración con archivos de los tres formatos; la ejecución completa pasa a ser obligatoria antes de cada release (criterio nuevo en QAL-08).
+Responsable: Gameplay Programmer (sistema de guardado).

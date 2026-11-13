@@ -1,0 +1,36 @@
+ID: QAL-03
+Título: Reporte de bug BUG-2087: el juego se cierra al abrir el inventario
+Tipo de documento: Reporte de bug
+Autor/Rol: QA Analyst
+Versión: 1.1 | Estado: Cerrado | Fecha: 2026-10-07
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-01, QAL-02, QAL-04
+======================================================================
+REPORTE BUG-2087
+
+1. RESUMEN
+El juego se cierra (crash) al desplazarse hasta el final de un inventario con más de 150 objetos.
+
+2. DATOS
+  Severidad: alta · Prioridad: alta · Módulo: inventario
+  Plataforma: PC · Build: 1.3.2-rc1 · Reportado: 2026-09-29 · Asignado a: Gameplay Programmer
+
+3. PASOS PARA REPRODUCIR
+  1) Cargar la partida de prueba INV-200 (más de 150 objetos).
+  2) Abrir el inventario.
+  3) Desplazarse hasta el final de la lista.
+
+4. RESULTADO ACTUAL Y ESPERADO
+Actual: cierre inesperado con el error "Index out of range". Esperado: el inventario se muestra y permite desplazarse normalmente.
+
+5. FRECUENCIA Y EVIDENCIA
+Se reproduce en 8 de 10 intentos. Evidencia: registro de errores (crash log del 2026-09-29) y video de 40 segundos.
+
+6. ANÁLISIS
+Causa raíz: el índice de desplazamiento supera el tamaño de la lista virtualizada definida en ADR-014 (ING-01).
+
+7. CORRECCIÓN Y VERIFICACIÓN
+- 2026-10-02: corregido en la compilación 1.3.2-rc2.
+- 2026-10-02: verificado con TC-0412b (QAL-02), aprobado en 10 de 10 intentos.
+- 2026-10-07: confirmado en la regresión 1.3.2 (QAL-04).
+Estado final: cerrado.

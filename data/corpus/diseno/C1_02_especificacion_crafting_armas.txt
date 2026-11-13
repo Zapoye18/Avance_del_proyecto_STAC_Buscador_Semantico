@@ -1,0 +1,39 @@
+ID: DIS-02
+Título: Especificación del sistema de crafting de armas
+Tipo de documento: Especificación de mecánica
+Autor/Rol: Systems Designer
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-09-21
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-01, DIS-03, DIS-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Describe cómo el jugador fabrica armas en el banco de trabajo (crafting): materiales, recetas, costos y restricciones de progresión. Los valores de combate de cada arma están en DIS-03; la economía de monedas, en DIS-08.
+
+2. CONTEXTO
+El crafting es el principal sumidero de materiales y monedas del juego. Si las armas poderosas llegan demasiado pronto, se rompe la curva de dificultad de DIS-01.
+
+3. REGLAS
+3.1 El banco de trabajo está disponible en el campamento de cada mundo. 
+3.2 Cada receta exige materiales, monedas y un nivel mínimo. Si falta algún material no se consume ninguno.
+3.3 Recetas vigentes:
+
+  Receta              | Materiales                                  | Costo | Nivel mín. | Mundo mín.
+  Espada básica       | 3 lingotes de hierro + 1 cuero              | 60    | 3          | 1
+  Arco de caza        | 4 madera curada + 2 cuerda                  | 80    | 3          | 1
+  Lanza de guardia    | 4 lingotes de hierro + 2 madera curada      | 120   | 8          | 1
+  Espada reforzada    | 5 lingotes + 2 cuero + 1 esencia de brasa   | 180   | 12         | 2
+  Martillo del faro   | 8 lingotes + 3 esencia de brasa             | 400   | 22         | 3
+
+3.4 Los materiales se acumulan hasta 99 unidades por tipo.
+
+4. RESTRICCIONES Y EXCEPCIONES
+- Las armas raras (Martillo del faro) no pueden fabricarse antes del mundo 3, para evitar que el jugador obtenga armas poderosas demasiado pronto.
+- Si el inventario está lleno, el arma fabricada se envía al almacén del campamento.
+
+5. CRITERIOS DE VALIDACIÓN
+- El jugador promedio fabrica su primera arma antes de 25 minutos de juego.
+- Ninguna receta puede completarse con materiales de un mundo posterior al indicado.
+- Las recetas se revisan tras cada playtest (próximo: 2026-11-12).
+
+6. RESPONSABLES Y REFERENCIAS
+Responsable: Systems Designer. Relacionados: DIS-01, DIS-03, DIS-08.

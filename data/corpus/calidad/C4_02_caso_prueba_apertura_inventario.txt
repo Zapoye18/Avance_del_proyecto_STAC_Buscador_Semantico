@@ -1,0 +1,35 @@
+ID: QAL-02
+Título: Caso de prueba TC-0412: apertura del inventario
+Tipo de documento: Caso de prueba
+Autor/Rol: QA Analyst
+Versión: 1.3 | Estado: Vigente | Fecha: 2026-10-06
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-01, QAL-03
+======================================================================
+1. IDENTIFICACIÓN
+Caso TC-0412 (variante TC-0412b con 200 objetos). Módulo: inventario. Prioridad: alta. Requisito: REQ-INV-01 (inventario de hasta 200 objetos, ver ING-01).
+
+2. OBJETIVO
+Verificar que el inventario se abre, permite equipar un objeto y se cierra sin errores.
+
+3. PRECONDICIONES
+- Partida iniciada con 10 objetos (TC-0412) o con 200 objetos (TC-0412b).
+- Plataforma: PC o consola.
+
+4. PASOS Y RESULTADO ESPERADO
+
+  Paso | Acción                                       | Resultado esperado
+  1    | Abrir el inventario con el botón asignado    | Aparece la lista en menos de 1 s
+  2    | Desplazarse hasta el último objeto           | Sin congelamientos ni cierre del juego
+  3    | Seleccionar un objeto y equiparlo            | El objeto queda equipado y el icono cambia
+  4    | Cerrar el menú                               | El juego vuelve al estado anterior
+
+5. CRITERIO DE APROBACIÓN
+Los 4 pasos cumplen el resultado esperado. Si alguno falla, se registra el defecto con pasos para reproducir (formato de QAL-03) y el caso queda como fallido.
+
+6. HISTORIAL
+v1.0 (2026-08-18): caso inicial con 10 objetos. v1.2 (2026-09-24): se añade TC-0412b con 200 objetos y paso 2, tras el defecto BUG-2087.
+v1.3 (2026-10-06): se registran los resultados de la corrida sobre 1.3.2-rc3.
+
+7. RESULTADOS RECIENTES
+Corrida del 2026-10-06 (build 1.3.2-rc3): TC-0412 aprobado, TC-0412b aprobado. Responsable: QA Analyst.

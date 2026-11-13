@@ -1,0 +1,36 @@
+ID: NEG-01
+Título: Análisis de retención y churn de jugadores (cohorte de septiembre de 2026)
+Tipo de documento: Análisis de métricas
+Autor/Rol: Product Analyst
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-11-04
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: 
+======================================================================
+1. OBJETIVO Y ALCANCE
+Mide cuántos jugadores nuevos siguen jugando después de 7 y 30 días (retención, retention) y dónde abandonan (churn). Analiza la cohorte de jugadores que instalaron el juego entre el 2026-09-01 y el 2026-09-30.
+
+2. DATOS Y PERIODO DE OBSERVACIÓN
+Fuente: Unity Analytics, exportación del 2026-11-03. Cohorte: 12 000 jugadores nuevos. Observación: hasta el 2026-10-31, de modo que todos los jugadores tuvieron al menos 30 días. Definición: un jugador "retenido en el día N" juega al menos una partida el día N después de instalar.
+
+3. RESULTADOS
+
+  Métrica                                   | Valor
+  Retención al día 7                        | 38 % (4 560 jugadores)
+  Retención al día 30                       | 17 % (2 040 jugadores)
+  Retención al día 30 en cooperativo        | 24 %
+  Retención al día 30 jugando solo          | 9 %
+  Abandonos antes del día 7 en la misión 3 del mundo 1 | 41 %
+
+El 55 % de la cohorte jugó mayormente en cooperativo.
+
+4. INTERPRETACIÓN
+Los jugadores que juegan en cooperativo se quedan casi 3 veces más (24 % frente a 9 %). El punto de mayor abandono es la misión 3 del mundo 1, que parece demasiado difícil para quien llega solo. La relación es observada y no demuestra causalidad.
+
+5. RECOMENDACIONES
+  1) Revisar la dificultad de la misión 3 en solitario (Diseño).
+  2) Mejorar el tutorial del cooperativo y del emparejamiento.
+  3) Medir de nuevo con la cohorte de diciembre, después de la actualización 1.4.
+
+6. LIMITACIONES
+No se separa por plataforma y no incluye a jugadores que desactivaron la analítica.
+Responsable: Product Analyst.

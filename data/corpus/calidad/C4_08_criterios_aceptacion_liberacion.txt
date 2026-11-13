@@ -1,0 +1,32 @@
+ID: QAL-08
+Título: Criterios de aceptación para liberar una versión
+Tipo de documento: Criterios de aceptación
+Autor/Rol: QA Lead
+Versión: 2.0 | Estado: Vigente | Fecha: 2026-10-30
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-02, PRO-03, PRO-05, QAL-01, QAL-04, QAL-06, QAL-07
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define qué debe cumplirse para que una versión pueda publicarse. Verifica requisitos del producto; no los define.
+
+2. CONTEXTO
+La v2.0 incorpora acciones del postmortem del 9 de octubre (PRO-05): prueba de migración de guardado obligatoria y no desplegar en viernes.
+
+3. CRITERIOS (TODOS OBLIGATORIOS)
+
+  # | Criterio                                              | Verificación
+  1 | Cero defectos críticos o altos abiertos               | Lista de defectos en Jira
+  2 | Regresión completa aprobada (mínimo 98 % de casos)    | Informe como QAL-04
+  3 | Migración de guardado probada con archivos de formatos 1.0 y 1.1 | Casos TC-0520 y TC-0521 (ING-02)
+  4 | Rendimiento: 55 FPS o más en la arena final con 4 jugadores | Informe como QAL-07
+  5 | Tiempo de carga en consola de 30 s o menos            | Informe de compatibilidad (QAL-06)
+  6 | Plan de pruebas cerrado y firmado por el QA Lead      | QAL-01
+
+4. EXCEPCIONES
+El QA Lead puede aceptar defectos medios o bajos conocidos, anotándolos en el informe de salida. Una excepción a los criterios 1, 3, 4 o 5 requiere aprobación de Producción.
+
+5. SI NO SE CUMPLEN
+La versión no se publica. Se registra la causa, se corrige y se repite la validación afectada. La decisión de salida se registra en el plan de lanzamiento (PRO-03).
+
+6. RESPONSABLES
+Responsable de aplicarlos: QA Lead. Revisión: Producer y Technical Lead.

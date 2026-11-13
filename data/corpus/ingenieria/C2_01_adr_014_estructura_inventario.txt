@@ -1,0 +1,33 @@
+ID: ING-01
+Título: ADR-014: Estructura de datos del inventario
+Tipo de documento: Architecture Decision Record (ADR)
+Autor/Rol: Technical Lead
+Versión: 1.1 | Estado: Aceptado | Fecha: 2026-10-05
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-02, QAL-02, QAL-03
+======================================================================
+ADR-014 · Estructura de datos del inventario
+Decisión original: 2026-08-20 · Última actualización: 2026-10-05
+
+1. ESTADO
+Aceptado. Vigente en las versiones 1.2 a 1.3.3.
+
+2. CONTEXTO
+El inventario debe soportar hasta 200 objetos por jugador y sincronizarse entre clientes y servidor. La versión 1.1 usaba un diccionario por nombre de objeto y producía orden inestable entre clientes y condiciones de carrera al guardar.
+
+3. DECISIÓN
+Usar una lista indexada con identificadores únicos (item_id de 64 bits) en lugar de un diccionario por nombre. Cada posición guarda item_id, cantidad y versión del objeto.
+
+4. ALTERNATIVAS CONSIDERADAS
+- Diccionario por nombre: lecturas rápidas, pero orden inestable y colisiones al sincronizar.
+- Árbol por categoría: más ordenado, pero complejo de mantener y de serializar.
+
+5. CONSECUENCIAS
+- El módulo de guardado (ING-02) depende de este formato. Cualquier cambio exige migración de datos.
+- La interfaz virtualiza la lista al desplazarse, lo que introdujo el defecto BUG-2087 (QAL-03).
+
+6. ACTUALIZACIÓN 2026-10-05
+BUG-2087 mostró un desbordamiento del índice de desplazamiento con más de 150 objetos. Se corrigió en la compilación 1.3.2-rc2 sin cambiar la decisión. Se añadió el límite de 200 objetos como prueba de rendimiento obligatoria.
+
+7. VALIDACIÓN
+Caso TC-0412 (QAL-02) y su variante con 200 objetos. Responsable: Technical Lead.

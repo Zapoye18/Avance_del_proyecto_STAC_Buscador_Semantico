@@ -1,0 +1,37 @@
+ID: NEG-06
+Título: Reporte comercial mensual: ventas e ingresos por plataforma (octubre de 2026)
+Tipo de documento: Reporte comercial
+Autor/Rol: Product Manager
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-11-05
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: NEG-01, NEG-02, NEG-07
+======================================================================
+REPORTE COMERCIAL · Octubre de 2026 (2026-10-01 a 2026-10-31)
+Cifras ficticias de planeación del estudio.
+
+1. RESUMEN
+Se vendieron 4 200 unidades y los ingresos netos fueron de 1 100 000 MXN, 9 % más unidades que en septiembre de 2026 (3 850).
+
+2. RESULTADOS
+
+  Concepto                          | Valor
+  Unidades vendidas                 | 4 200
+    PC (62 %)                       | 2 604
+    Consola (38 %)                  | 1 596
+  Ingresos netos                    | 1 100 000 MXN
+  Ingreso promedio por unidad       | 262 MXN
+  Reembolsos                        | 3.1 % (130 unidades)
+  Participación del publisher (30 %)| 330 000 MXN
+
+3. INTERPRETACIÓN
+El crecimiento coincide con el regreso de jugadores tras la versión 1.3.3 y con la promoción de octubre. La tasa de reembolsos está dentro del 2 % a 4 % esperado. PC concentra la mayoría de las ventas.
+
+4. RIESGOS
+Los ingresos por unidad bajaron frente a septiembre por descuentos; el efecto del incidente del 9 de octubre en las reseñas está en análisis.
+
+5. PROPUESTAS
+  1) Promociones de temporada alineadas con la campaña de la actualización 1.4 (NEG-02).
+  2) Analizar la monetización de contenidos descargables con los datos de NEG-01 y NEG-07.
+
+6. RESPONSABLE Y FUENTES
+Product Manager. Fuentes: reportes de las plataformas de distribución y el acuerdo con el publisher.

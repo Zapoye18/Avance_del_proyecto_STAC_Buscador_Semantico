@@ -1,0 +1,34 @@
+ID: DIS-04
+Título: Diseño de nivel: Ruinas del Faro
+Tipo de documento: Especificación de nivel (level design)
+Autor/Rol: Level Designer
+Versión: 1.1 | Estado: Vigente | Fecha: 2026-10-29
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-05, ING-05, QAL-07
+======================================================================
+1. OBJETIVO Y ALCANCE
+Especifica el nivel Ruinas del Faro (mundo 2, nivel recomendado 14 a 16, 4 jugadores, 25 a 35 minutos). Incluye estructura, encuentros, puzzle cooperativo y puntos de reaparición (checkpoints).
+
+2. CONTEXTO
+Es el primer nivel con jefe obligatorio. La v1.1 reduce la arena final a un máximo de 32 enemigos simultáneos, porque QA registró caídas de FPS en esa zona (ver QAL-07 e ING-05).
+
+3. ESTRUCTURA
+Entrada -> tres rutas paralelas -> sala del puzzle -> arena final.
+  Ruta A: Galería inundada (combate a distancia, 6 enemigos).
+  Ruta B: Escalera del Vigía (plataformas móviles, 8 enemigos).
+  Ruta C: Cripta de los Guardianes (emboscadas, 10 enemigos).
+3.1 Puzzle cooperativo: dos jugadores activan palancas a la vez (ventana de 3 segundos). Si fallan, el mecanismo se reinicia sin penalización.
+3.2 Arena final: oleadas de hasta 32 enemigos. Tiempo esperado: 4 a 6 minutos.
+3.3 Checkpoints: 4 (entrada, fin de cada ruta, antes de la arena).
+
+4. RESTRICCIONES Y EXCEPCIONES
+- Con 1 o 2 jugadores el puzzle cambia a palancas con temporizador de 8 segundos.
+- La reanimación funciona en todo el nivel salvo durante la animación de entrada a la arena (ver DIS-05).
+
+5. CRITERIOS DE VALIDACIÓN
+- Rendimiento: mínimo 55 FPS en la arena final con 4 jugadores (meta de ING-05).
+- Un grupo nuevo completa el nivel en menos de 35 minutos en 8 de cada 10 intentos.
+- Guía visual sin marcadores intrusivos: se valida en playtest.
+
+6. RESPONSABLES Y REFERENCIAS
+Responsable: Level Designer. Cambios de v1.1: arena reducida de 40 a 32 enemigos.

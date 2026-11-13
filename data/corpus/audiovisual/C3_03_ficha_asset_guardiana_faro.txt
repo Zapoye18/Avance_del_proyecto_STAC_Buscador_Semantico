@@ -1,0 +1,34 @@
+ID: ART-03
+Título: Ficha de asset: personaje Guardiana del Faro
+Tipo de documento: Ficha de asset
+Autor/Rol: 3D Artist
+Versión: 1.2 | Estado: Aprobado con pendientes | Fecha: 2026-10-05
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-01, ART-02, ART-06
+======================================================================
+1. IDENTIFICACIÓN
+Asset: SK_GuardianaFaro. Personaje no jugable del nivel Ruinas del Faro. Responsable: 3D Artist. Revisión técnica: Technical Artist.
+
+2. ESPECIFICACIONES
+
+  Característica   | Valor actual        | Límite para consola
+  Polígonos        | 28 000              | 20 000
+  Esqueleto (rig)  | 74 huesos           | 80 huesos
+  Texturas         | 4 (2048 px)         | 4
+  Variantes color  | 3                   | 3
+  Memoria          | 11 MB               | 8 MB
+
+3. MATERIALES
+Tela, metal pulido y cuero. Siguen la paleta de ART-01 y la nomenclatura de ART-02.
+
+4. ANIMACIONES ASOCIADAS
+Caminar, correr, atacar y reanimar (ver lista de animaciones del proyecto).
+
+5. ESTADO Y PENDIENTES
+Aprobado por la dirección de arte el 2026-10-05. Pendiente de optimización: el modelo supera en 8 000 polígonos y 3 MB el límite para consola. Plan: retopología del manto y LOD1 de 12 000 polígonos (procedimiento en ART-06).
+
+6. CRITERIOS DE VALIDACIÓN
+Cumple el límite de polígonos y memoria, la silueta se reconoce a 20 metros y el rig no deforma el manto en las 4 animaciones.
+
+7. SI FALLA
+Si tras la optimización la silueta cambia, el Art Director decide si se acepta o se rehace el LOD.

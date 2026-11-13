@@ -1,0 +1,37 @@
+ID: ART-06
+Título: Procedimiento de optimización de texturas
+Tipo de documento: Procedimiento de optimización
+Autor/Rol: Technical Artist
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-10-29
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-02, ART-03, ING-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Reducir el consumo de memoria de video y de CPU de assets sin perder calidad visible. Aplica a personajes, enemigos, escenarios y props.
+
+2. CONTEXTO
+La v1.2 añade el paso de LOD para enemigos, solicitado por ING-05 tras el análisis de rendimiento del nivel Ruinas del Faro.
+
+3. PROCEDIMIENTO
+  1) Medir la memoria actual con el visor de estadísticas del motor y anotarla en la ficha del asset (ver ART-03).
+  2) Elegir la resolución según la distancia de cámara: más de 15 m, usar la mitad de la resolución estándar de ART-02.
+  3) Generar mipmaps.
+  4) Empaquetar rugosidad, metalicidad y oclusión en una sola textura.
+  5) Comprimir con BC7 y comparar visualmente con el original.
+  6) Para mallas con demasiados polígonos: retopología y LOD1 (40 % del original) y LOD2 (15 %).
+  7) Registrar la memoria final en la ficha.
+
+4. RESTRICCIONES Y EXCEPCIONES
+- No reducir texturas de rostros de personajes jugables por debajo de 2048 px.
+- Los LOD de enemigos requieren aprobación del Art Director si cambian la silueta.
+
+5. CRITERIOS DE VALIDACIÓN
+  Asset              | Meta de memoria
+  Personaje          | 8 MB o menos
+  Enemigo (con LOD)  | 4 MB o menos
+  Prop               | 2 MB o menos
+La diferencia visual debe ser imperceptible en pantalla a 1080p.
+
+6. SI FALLA
+Si aparecen artefactos de compresión, usar BC5 para normales o conservar la textura sin comprimir y pedir excepción al Technical Artist.
+Responsable: Technical Artist.

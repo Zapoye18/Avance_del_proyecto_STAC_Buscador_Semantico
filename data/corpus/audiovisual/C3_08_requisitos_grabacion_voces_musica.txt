@@ -1,0 +1,33 @@
+ID: ART-08
+Título: Requisitos de grabación de voces y música
+Tipo de documento: Requisitos de grabación
+Autor/Rol: Audio Director
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-09-25
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define el formato y los criterios de entrega de voces y música para integrarlas con el audio interactivo del juego (ver ART-05).
+
+2. VOCES
+  - Formato WAV, 48 kHz, 24 bits, mono.
+  - Sin ruido de fondo (piso de ruido menor a -60 dB).
+  - Tomas alternativas: mínimo 2 por cada línea de diálogo.
+  - Cada línea llega con personaje, emoción y contexto en la lista de líneas.
+  - Nombres: V_<Personaje>_<Escena>_<Linea>_<Toma>, sin acentos.
+
+3. MÚSICA
+  - Composición original con instrumentos de cuerda y percusión.
+  - Entrega por stems (percusión, cuerdas, ambiente) para las capas adaptativas.
+  - Duración de bucle en compases completos, con empalme sin clics.
+
+4. RESTRICCIONES Y EXCEPCIONES
+- No se aceptan samples sin licencia; la entrega debe acompañarse de la autoría (Legal revisa los derechos).
+- Las voces de menos de 1 s no necesitan tomas alternativas.
+
+5. SI FALLA
+Si una entrega no cumple el formato, el Audio Director la devuelve con un reporte y el proveedor tiene 3 días hábiles para corregirla.
+
+6. CRITERIOS DE VALIDACIÓN
+El compositor y el Audio Director aprueban cada entrega; un audio pasa si cumple formato, nivel y empalme.
+Responsable: Audio Director.

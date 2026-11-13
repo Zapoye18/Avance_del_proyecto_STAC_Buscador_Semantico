@@ -1,0 +1,29 @@
+ID: ART-07
+Título: Guía de VFX: efectos de fuego y shaders
+Tipo de documento: Guía de efectos visuales (VFX)
+Autor/Rol: Technical Artist
+Versión: 1.1 | Estado: Vigente | Fecha: 2026-10-22
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-01, ART-04, ING-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define cómo se crean los efectos visuales de fuego y calor del juego (partículas y shaders), con límites de rendimiento.
+
+2. CONTEXTO
+Los efectos de fuego son los más costosos del juego y aparecen con más frecuencia en el mundo 3 y en el jefe final (ART-04). La paleta sigue ART-01.
+
+3. REGLAS DE CREACIÓN
+3.1 Partículas: tarjetas animadas (flipbook de 8 x 8) con un shader de distorsión de calor.
+3.2 Límites por efecto: máximo 300 partículas simultáneas y overdraw menor a 4 capas.
+3.3 Parámetros base: color de #E8641B a #FFD27F, duración 1.2 s, emisión de 120 partículas por segundo.
+3.4 Sincronización: los efectos arrancan con los eventos de animación del jefe.
+
+4. RESTRICCIONES Y EXCEPCIONES
+- No más de 3 efectos de fuego grandes visibles a la vez en una escena de 4 jugadores.
+- Sin transparencia completa sobre los enemigos: confunde la lectura del daño.
+
+5. SI FALLA
+Si baja el rendimiento en consola, reducir la emisión a 60 por segundo, desactivar la distorsión de calor y revisar con el profiling (ver ING-05).
+
+6. CRITERIOS DE VALIDACIÓN
+El efecto se prueba en la consola objetivo; no puede costar más de 1.2 ms de GPU por frame. Responsable: Technical Artist.

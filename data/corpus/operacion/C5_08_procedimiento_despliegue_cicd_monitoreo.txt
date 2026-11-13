@@ -1,0 +1,36 @@
+ID: PRO-08
+Título: Procedimiento de despliegue en servidores con CI/CD y monitoreo
+Tipo de documento: Procedimiento operativo
+Autor/Rol: DevOps Engineer
+Versión: 2.0 | Estado: Vigente | Fecha: 2026-10-16
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-03, PRO-04, PRO-05, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Describe cómo se despliegan servicios y versiones del servidor con el pipeline de GitLab y cómo se monitorean. La v2.0 incorpora las acciones A-2 y A-3 del postmortem PRO-05.
+
+2. PIPELINE
+  1) Compilar (mismos pasos que ING-03).
+  2) Ejecutar pruebas automáticas; si fallan, el pipeline se detiene.
+  3) Publicar la imagen de contenedor.
+  4) Desplegar por etapas.
+
+3. DESPLIEGUE POR ETAPAS
+
+  Etapa | Alcance                    | Observación      | Condición para avanzar
+  1     | 10 % de servidores o cuentas| 30 minutos       | errores menores a 2 %
+  2     | 50 %                       | 30 minutos       | errores menores a 2 %
+  3     | 100 %                      | monitoreo 24 h   | -
+
+Los servicios compartidos (guardado, sesiones) también se despliegan por etapas usando cuentas piloto.
+
+4. MONITOREO (GRAFANA)
+Tasa de errores, uso de CPU, sesiones activas y errores de carga. Alertas automáticas al equipo de guardia cuando la tasa de errores supera 2 %.
+
+5. RESTRICCIONES
+- No se despliega en viernes ni en vísperas de feriado.
+- Todo despliegue necesita la aprobación de QA Lead según QAL-08.
+
+6. SI FALLA
+Seguir el runbook de reversión PRO-04. Si el problema afecta a más de 5 % de las sesiones, declarar incidente y escalar a Ingeniería.
+Responsable: DevOps Engineer.

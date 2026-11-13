@@ -1,0 +1,37 @@
+ID: ART-04
+Título: Lista de animaciones del jefe final Coloso de Brasas
+Tipo de documento: Lista de animaciones
+Autor/Rol: Animator
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-10-21
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-02, ART-05, ART-07, DIS-06, QAL-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Lista todas las animaciones del jefe final con duración, bucle y eventos, para que Programación y Audio las conecten. Incluye el cambio de la decisión DIS-06 (inmunidad al fuego en fase 2).
+
+2. CONTEXTO
+La v1.2 añade la animación de "coraza de ceniza" que representa visualmente la inmunidad al fuego en la fase 2.
+
+3. ANIMACIONES
+
+  Fase | Nombre            | Duración (fotogramas a 30 fps) | Bucle | Evento de animación
+  1    | Idle              | 90                             | sí    | -
+  1    | Golpe de martillo | 54                             | no    | impacto en el fotograma 32
+  1    | Embestida         | 72                             | no    | inicio de daño en el 20
+  1    | Rugido            | 60                             | no    | SFX_Rugido en el 10
+  2    | Transición        | 120                            | no    | explosión y coraza en el 60
+  2    | Lluvia de brasas  | 96                             | no    | partículas en el 12
+  2    | Ataque giratorio  | 84                             | no    | daño continuo del 24 al 60
+  2    | Idle con coraza   | 90                             | sí    | -
+
+4. REGLAS TÉCNICAS
+- Formato FBX con nombres según ART-02 (prefijo A_Coloso_).
+- La mezcla entre fases dura 8 fotogramas.
+- Los eventos de animación disparan los sonidos de ART-05 y los efectos de ART-07.
+
+5. SI FALLA
+Si un evento no dispara en el motor, comprobar el nombre del evento y que la animación esté en la lista de la Blueprint del jefe.
+
+6. CRITERIOS DE VALIDACIÓN
+QA verifica que cada animación se reproduce en su fase y que la coraza aparece al llegar a 50 % de vida (casos TC-0460 a TC-0463, ver QAL-05).
+Responsable: Animator.

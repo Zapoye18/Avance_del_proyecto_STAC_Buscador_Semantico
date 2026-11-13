@@ -1,0 +1,34 @@
+ID: NEG-07
+Título: Análisis de audiencia y encuesta de jugadores
+Tipo de documento: Análisis de audiencia
+Autor/Rol: Product Analyst
+Versión: 1.0 | Estado: Vigente | Fecha: 2026-10-28
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: NEG-01, NEG-02
+======================================================================
+1. OBJETIVO Y ALCANCE
+Conocer el perfil de los jugadores y sus principales peticiones, para orientar la hoja de ruta del producto y las campañas.
+
+2. MÉTODO
+Encuesta en el juego y por Discord, del 2026-10-05 al 2026-10-18. Se recibieron 1 500 respuestas válidas. Es una muestra voluntaria, no representativa de todos los jugadores.
+
+3. PERFIL
+
+  Característica               | Resultado
+  Edad de 18 a 34 años         | 84 % (de 18 a 24: 38 %, de 25 a 34: 46 %)
+  País: México                 | 61 %
+  País: resto de Latinoamérica | 27 %
+  Juega cooperativo con amigos | 72 %
+
+4. SATISFACCIÓN Y PETICIONES
+Satisfacción general: 4.2 de 5. Peticiones principales (se podía elegir más de una):
+  - Más personalización de personajes: 34 %
+  - Contenido nuevo cada mes: 31 %
+  - Modo de dificultad accesible: 28 %
+
+5. INTERPRETACIÓN
+El cooperativo con amigos es el principal valor del juego; esto coincide con la mayor retención en cooperativo de NEG-01. Las peticiones apuntan a personalización y contenido continuo.
+
+6. USO RECOMENDADO
+Insumos para la hoja de ruta, la campaña de la 1.4 (NEG-02) y la estrategia de comunidad. Limitación: quienes responden suelen ser los jugadores más comprometidos.
+Responsable: Product Analyst.

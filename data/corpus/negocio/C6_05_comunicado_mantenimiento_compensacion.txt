@@ -1,0 +1,30 @@
+ID: NEG-05
+Título: Comunicado a la comunidad: mantenimiento programado y compensación
+Tipo de documento: Comunicado
+Autor/Rol: Community Manager
+Versión: 1.0 | Estado: Aprobado | Fecha: 2026-11-09
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-08, NEG-03
+======================================================================
+COMUNICADO A LA COMUNIDAD · 9 de noviembre de 2026
+
+1. ASUNTO
+Mantenimiento programado de servidores el sábado 14 de noviembre de 2026.
+
+2. TEXTO PARA PUBLICAR
+Hola, jugadores y jugadoras de Ecos del Faro:
+El sábado 14 de noviembre, de 2:00 a 5:00 horas (hora de Monterrey), haremos mantenimiento en nuestros servidores para preparar la actualización 1.4. Durante ese tiempo no se podrá jugar en línea. Tu progreso no se verá afectado.
+Como agradecimiento, todos los jugadores recibirán 500 monedas y el cosmético "Farol de brasa". Se entregarán automáticamente al iniciar sesión entre el 14 y el 30 de noviembre.
+Gracias por jugar y por tu paciencia.
+
+3. DATOS DE APOYO
+  Qué: mantenimiento de la base de datos de sesiones. Duración: 3 horas. Impacto: sin juego en línea; el modo sin conexión sigue disponible.
+
+4. CANALES Y TONO
+Se publica en Discord, redes sociales y la página oficial el 2026-11-10. Tono cercano y transparente. Las dudas se atienden con la FAQ de partidas (NEG-03).
+
+5. APROBACIONES
+Community Manager y Producer (2026-11-09). La compensación de 500 monedas se registra como evento especial, fuera de la medición de inflación (DIS-08).
+
+6. SI SE EXTIENDE EL MANTENIMIENTO
+Se publica una actualización a las 5:00 horas y se informa la nueva hora estimada de regreso. Responsable: Community Manager.

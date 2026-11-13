@@ -1,0 +1,37 @@
+ID: DIS-08
+Título: Especificación de la economía interna: monedas y recompensas de quests
+Tipo de documento: Especificación de economía
+Autor/Rol: Systems Designer
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-11-09
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: DIS-02, NEG-05
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define de dónde salen y adónde van las monedas del juego, para evitar inflación y mantener el balance de recompensas. No incluye monedas premium ni tienda en dinero real.
+
+2. CONTEXTO
+En el playtest 1 (1 de octubre de 2026) el saldo mediano de los jugadores de nivel 20 fue de 2 400 monedas; el objetivo es no pasar de 3 000.
+
+3. FUENTES (SOURCES)
+
+  Fuente                  | Monedas
+  Quest principal         | 200 a 400
+  Misión secundaria       | 50 a 120
+  Jefe de mundo           | 500
+  Venta de materiales     | 2 a 15 por unidad
+
+4. SUMIDEROS (SINKS)
+
+  Sumidero                | Monedas
+  Recetas de crafting     | 60 a 400 (ver DIS-02)
+  Mejoras de equipo       | 150 a 900
+  Cosméticos              | 300 a 1 200
+
+5. RESTRICCIONES Y EXCEPCIONES
+- Las compensaciones del estudio (por ejemplo 500 monedas tras un mantenimiento, ver NEG-05) se registran como evento especial y no cuentan en la medición de inflación.
+- Los cosméticos no afectan estadísticas de combate.
+
+6. CRITERIOS DE VALIDACIÓN
+- Saldo mediano de nivel 20 menor o igual a 3 000 monedas.
+- Ninguna fuente aporta más de 45 % de las monedas totales de un jugador.
+Responsable: Systems Designer. Se revisa tras cada playtest.

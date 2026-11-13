@@ -1,0 +1,33 @@
+ID: QAL-04
+Título: Resultados de regresión de la versión 1.3.2
+Tipo de documento: Informe de regresión
+Autor/Rol: QA Lead
+Versión: 1.2 | Estado: Vigente | Fecha: 2026-10-15
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ING-02, PRO-05, QAL-03, QAL-08
+======================================================================
+1. OBJETIVO Y ALCANCE
+Informa los resultados de la regresión ejecutada del 2026-10-05 al 2026-10-07 sobre la build 1.3.2-rc3 (320 casos). Verifica que las correcciones no rompieron funcionalidades existentes.
+
+2. RESULTADOS
+
+  Módulo        | Casos | Aprobados | Fallidos | Bloqueados
+  Combate       | 70    | 69        | 1        | 0
+  Crafting      | 40    | 40        | 0        | 0
+  Reanimación   | 30    | 30        | 0        | 0
+  Inventario    | 60    | 54        | 6        | 0
+  Guardado      | 70    | 62        | 5        | 3
+  Matchmaking   | 50    | 46        | 2        | 2
+  Total         | 320   | 301 (94 %)| 14       | 5
+
+3. INTERPRETACIÓN
+Los fallos se concentran en inventario y guardado (11 de 14). Dos son de severidad alta (BUG-2101 y BUG-2103, guardado). Se confirmó que BUG-2087 está corregido (QAL-03). Los 5 bloqueados dependen del entorno de reconexión, que no estaba disponible.
+
+4. ACTUALIZACIÓN 2026-10-08
+Los dos defectos altos se corrigieron en la build 1.3.2-rc4 y se repitieron: aprobados. Quedan 12 fallos de severidad media o baja, aceptados por el QA Lead para el lanzamiento.
+
+5. LIMITACIÓN CONOCIDA (nota añadida el 2026-10-15)
+Las pruebas de migración solo cubrían archivos del formato 1.0 a 2.0; no había casos con archivos del formato 1.1 (ver ING-02). Esta brecha se vincula con el incidente posterior al despliegue (PRO-05) y llevó a nuevos criterios en QAL-08.
+
+6. RECOMENDACIÓN
+Repetir la regresión sobre inventario y guardado en cada release. Responsable: QA Lead.

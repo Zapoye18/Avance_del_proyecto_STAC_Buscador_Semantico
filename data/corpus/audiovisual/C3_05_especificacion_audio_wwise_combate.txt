@@ -1,0 +1,37 @@
+ID: ART-05
+Título: Especificación de audio: eventos de combate en Wwise
+Tipo de documento: Especificación de audio
+Autor/Rol: Sound Designer
+Versión: 1.1 | Estado: Vigente | Fecha: 2026-10-14
+Proyecto: Norte Lúdico Studio - Ecos del Faro (videojuego cooperativo de acción y exploración)
+Documentos relacionados: ART-04, DIS-01, DIS-06
+======================================================================
+1. OBJETIVO Y ALCANCE
+Define los eventos de sonido del combate integrados con Wwise: efectos (SFX), música adaptativa y prioridad de voces.
+
+2. CONTEXTO
+La música debe subir de intensidad cuando aparece un jefe y reaccionar a los estados de DIS-01. Programación debe enviar los eventos con los nombres aquí definidos.
+
+3. MAPA DE EVENTOS
+
+  Evento                | Disparador                  | Variaciones | Prioridad
+  SFX_GolpeLigero       | Ataque básico               | 4 aleatorias| baja
+  SFX_GolpePesado       | Golpe pesado (gasta energía)| 3           | media
+  SFX_Quiebre           | Combo cooperativo           | 2           | alta
+  SFX_ReanimacionInicio | Inicio de reanimación       | 1           | alta
+  MUS_Combate_Capa2     | Aparece el jefe             | -           | -
+
+4. MÚSICA ADAPTATIVA
+Se usan 3 capas de percusión controladas por el parámetro CombatState (0 exploración, 1 combate, 2 jefe). El paso de 1 a 2 se hace en el siguiente compás.
+
+5. PRESUPUESTO Y RESTRICCIONES
+- Memoria de audio: 120 MB como máximo en la consola objetivo.
+- Máximo 48 voces simultáneas; las de prioridad baja se descartan primero.
+- Con el cambio de fase del jefe (DIS-06) se añade el evento SFX_CorazaCeniza, disparado por ART-04.
+
+6. SI FALLA
+Si no suena un evento, verificar que el nombre coincida y que el banco esté cargado. Reportar a Ingeniería con el registro del motor.
+
+7. CRITERIOS DE VALIDACIÓN
+El Sound Designer comprueba cada evento en el juego; QA verifica que ninguno se repita de forma audible más de 3 veces seguidas.
+Responsable: Sound Designer.
