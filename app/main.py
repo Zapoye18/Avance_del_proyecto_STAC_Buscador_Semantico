@@ -5,6 +5,10 @@ from app.storage import list_documents, read_document
 from app.preprocessing import normalize_text
 from app.classification_api import router as classification_router
 
+from app.search_api import (
+    router as search_router,
+)
+
 
 app = FastAPI(
     title="Norte Lúdico AI",
@@ -19,6 +23,8 @@ class TextRequest(BaseModel):
 
 # 2. Registrar el router de clasificación
 app.include_router(classification_router)
+# 3. Registrar el router de búsqueda
+app.include_router(search_router)
 
 
 @app.get("/health")
