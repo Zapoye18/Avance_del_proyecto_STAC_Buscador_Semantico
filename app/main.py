@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 
 from app.storage import list_documents, read_document
 from app.preprocessing import normalize_text
+from app.classification_api import router as classification_router
 
 
 app = FastAPI(
@@ -14,6 +15,10 @@ app = FastAPI(
 
 class TextRequest(BaseModel):
     text: str = Field(min_length=1)
+
+
+# 2. Registrar el router de clasificación
+app.include_router(classification_router)
 
 
 @app.get("/health")

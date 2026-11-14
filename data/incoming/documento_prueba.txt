@@ -1,0 +1,65 @@
+PROPUESTA DE MEJORAS DE ANIMACION DEL PERSONAJE PRINCIPAL "KAEL"
+
+Version: 1.0
+Fecha: 13 de noviembre de 2026
+Proyecto: Aventura cooperativa de accion (version 1.4)
+
+1. OBJETIVO
+
+Este documento propone cambios para mejorar la calidad, la fluidez y la respuesta visual de las animaciones del personaje principal Kael. El objetivo es que los movimientos transmitan peso y personalidad, y que el jugador sienta que el personaje responde de inmediato a sus comandos.
+
+2. PROBLEMAS DETECTADOS
+
+- La transicion entre caminar y correr es abrupta y produce un salto visible en las piernas.
+- La animacion de ataque con espada no tiene anticipacion ni seguimiento, por lo que los golpes se sienten ligeros.
+- Al recibir dano, el personaje no reacciona segun la direccion del impacto.
+- Los pies se deslizan sobre el suelo en pendientes y escaleras.
+- La animacion de reposo es una sola y se repite de forma notoria.
+
+3. CAMBIOS PROPUESTOS
+
+3.1 Locomocion
+- Reemplazar la transicion lineal entre caminar y correr por un blend space de velocidad con al menos cinco puntos intermedios.
+- Agregar inclinacion del torso en curvas cerradas para reforzar la sensacion de inercia.
+- Implementar IK de pies para que se adapten a pendientes, escalones y superficies irregulares, eliminando el deslizamiento.
+
+3.2 Combate
+- Anadir tres fases a cada ataque: anticipacion (3 a 5 fotogramas), impacto y recuperacion.
+- Aplicar una pausa breve de 2 a 4 fotogramas (hit stop) en el momento del impacto para dar peso al golpe.
+- Crear cuatro animaciones de reaccion al dano (frente, atras, izquierda y derecha) mas una reaccion fuerte para golpes criticos.
+- Permitir cancelar la recuperacion con la esquiva para mejorar la sensacion de control.
+
+3.3 Animaciones de reposo y personalidad
+- Crear de tres a cinco variaciones de reposo (estirar el cuello, revisar el arma, mirar alrededor) que se alternen de forma aleatoria.
+- Anadir animaciones faciales basicas para esfuerzo, dolor y alivio.
+
+3.4 Capas secundarias
+- Agregar simulacion de tela para la capa y la bufanda con parametros de viento controlables.
+- Ajustar la fisica de la mochila y de los accesorios colgantes para que reaccionen a saltos y aterrizajes.
+
+4. REQUISITOS TECNICOS
+
+- Mantener el esqueleto actual para no invalidar las animaciones existentes.
+- Limitar la animacion a un maximo de 30 fotogramas por segundo en la fuente y permitir interpolacion en el motor.
+- El costo de IK y de simulacion de tela no debe superar 0.8 ms por personaje en consola de generacion actual.
+- Todas las animaciones nuevas deben exportarse con el mismo formato y nomenclatura del proyecto.
+
+5. PLAN DE TRABAJO
+
+Semana 1: Revision de las animaciones actuales y captura de referencias.
+Semana 2: Locomocion, blend spaces e IK de pies.
+Semana 3: Animaciones de combate y reacciones al dano.
+Semana 4: Reposo, expresiones faciales y capas secundarias.
+Semana 5: Integracion en el motor, pruebas y ajustes finales.
+
+6. CRITERIOS DE ACEPTACION
+
+- No se observan saltos visibles en las transiciones de locomocion.
+- Los pies permanecen fijos en el suelo en pendientes de hasta 35 grados.
+- El equipo de revision confirma que los golpes se perciben con mayor peso en una prueba ciega.
+- El rendimiento se mantiene dentro del presupuesto tecnico indicado.
+
+7. RIESGOS
+
+- La simulacion de tela puede afectar el rendimiento en escenas con muchos personajes. Mitigacion: reducir la calidad segun la distancia a la camara.
+- La cancelacion de animaciones puede generar combinaciones inesperadas. Mitigacion: definir una tabla de transiciones permitidas y probarla.
