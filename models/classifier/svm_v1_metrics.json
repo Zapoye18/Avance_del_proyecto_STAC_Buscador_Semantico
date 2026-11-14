@@ -1,0 +1,24 @@
+{
+  "model": "svm_v1",
+  "algorithm": "LinearSVC",
+  "dataset": "documents_body.csv",
+  "documents": 48,
+  "classes": [
+    "audiovisual",
+    "calidad",
+    "diseno",
+    "ingenieria",
+    "negocio",
+    "operacion"
+  ],
+  "preprocessing": "configuration_C",
+  "n_splits": 4,
+  "random_state": 42,
+  "sklearn_version": "1.9.1",
+  "metrics": {
+    "accuracy": 0.8333333333333334,
+    "precision_macro": 0.8430555555555556,
+    "recall_macro": 0.8333333333333334,
+    "f1_macro": 0.8343253968253969
+  }
+}

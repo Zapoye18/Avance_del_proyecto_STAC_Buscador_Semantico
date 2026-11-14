@@ -1,0 +1,223 @@
+{
+  "dataset": "documents_body.csv",
+  "documents": 48,
+  "documents_per_department": {
+    "audiovisual": 8,
+    "calidad": 8,
+    "diseno": 8,
+    "ingenieria": 8,
+    "negocio": 8,
+    "operacion": 8
+  },
+  "evaluation": {
+    "method": "StratifiedKFold",
+    "n_splits": 4,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "vectorizer": {
+    "type": "TfidfVectorizer",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "strip_accents": "unicode",
+    "norm": "l2"
+  },
+  "sklearn_version": "1.9.1",
+  "results": {
+    "naive_bayes": {
+      "accuracy": 0.7916666666666666,
+      "precision_macro": 0.8065476190476191,
+      "recall_macro": 0.7916666666666666,
+      "f1_macro": 0.7898809523809524,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          6,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          6,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "classes": [
+        "audiovisual",
+        "calidad",
+        "diseno",
+        "ingenieria",
+        "negocio",
+        "operacion"
+      ]
+    },
+    "svm": {
+      "accuracy": 0.7916666666666666,
+      "precision_macro": 0.8065476190476191,
+      "recall_macro": 0.7916666666666666,
+      "f1_macro": 0.7898809523809524,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          6,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          6,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "classes": [
+        "audiovisual",
+        "calidad",
+        "diseno",
+        "ingenieria",
+        "negocio",
+        "operacion"
+      ]
+    },
+    "logistic": {
+      "accuracy": 0.7708333333333334,
+      "precision_macro": 0.7816558441558442,
+      "recall_macro": 0.7708333333333334,
+      "f1_macro": 0.7714181286549707,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          6,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          6,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          7
+        ]
+      ],
+      "classes": [
+        "audiovisual",
+        "calidad",
+        "diseno",
+        "ingenieria",
+        "negocio",
+        "operacion"
+      ]
+    }
+  },
+  "best_f1_macro": "naive_bayes"
+}

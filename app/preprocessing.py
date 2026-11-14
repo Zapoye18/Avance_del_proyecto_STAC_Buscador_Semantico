@@ -1,7 +1,59 @@
 from __future__ import annotations
 import re
+import pandas as pd
 import unicodedata
 from app.extraction import ExtractedDocument
+
+ROLES = [
+    "lead game designer",
+    "game designer",
+    "level designer",
+    "systems designer",
+    "art director",
+    "technical artist",
+    "3d artist",
+    "sound designer",
+    "audio director",
+    "qa analyst",
+    "qa lead",
+    "qa tester",
+    "backend engineer",
+    "gameplay programmer",
+    "engine programmer",
+    "technical lead",
+    "devops engineer",
+    "release manager",
+    "associate producer",
+    "producer",
+    "project manager",
+    "product manager",
+    "product analyst",
+    "marketing manager",
+    "community manager",
+    "support agent",
+    "support lead",
+]
+
+
+DATE_PATTERN = re.compile(
+    r"\b20\d{2}[-/](?:0?[1-9]|1[0-2])"
+    r"(?:[-/](?:0?[1-9]|[12]\d|3[01]))?\b"
+)
+
+
+ROLE_PATTERN = re.compile(
+    r"\b(?:"
+    + "|".join(
+        re.escape(role)
+        for role in sorted(
+            ROLES,
+            key=len,
+            reverse=True,
+        )
+    )
+    + r")\b",
+    flags=re.IGNORECASE,
+)
 
 # Identificadores propios del corpus
 DOCUMENT_REF_PATTERN = re.compile(
@@ -123,3 +175,44 @@ def prepare_for_search(document) -> str:
     parts.append(document.body)
 
     return normalize_text("\n".join(parts))
+
+def clean_model_text(text):
+    """
+    Elimina fechas y menciones de roles
+    seleccionadas para la configuración C.
+
+    Conserva el resto del contenido.
+    """
+
+    text = str(text)
+
+    text = DATE_PATTERN.sub(
+        " ",
+        text,
+    )
+
+    text = ROLE_PATTERN.sub(
+        " ",
+        text,
+    )
+
+    text = re.sub(
+        r"\s+",
+        " ",
+        text,
+    )
+
+    return text.strip()
+
+
+def transform_model_text(texts):
+    """
+    Recibe una colección de textos
+    y devuelve los textos preparados.
+
+    Se utiliza dentro del Pipeline.
+    """
+
+    return pd.Series(texts).map(
+        clean_model_text
+    ).tolist()
